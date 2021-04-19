@@ -34,8 +34,10 @@
 4. **Java数组（arrays）**
 
     ****
+    1. **多维数组（multi_dimension）**
 
-        **杨辉三角（PascalTriangle）** ：使用二维数组打印10行杨辉三角
+        **PascalTriangle** ：杨辉三角
+            使用二维数组 打印10行 杨辉三角
 
     ****
 
