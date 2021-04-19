@@ -1,4 +1,4 @@
-package basic.arrays.multi_dimension;
+package basic.arrays.assignment;
 
 /**
  * -*- coding: utf-8 -*-
