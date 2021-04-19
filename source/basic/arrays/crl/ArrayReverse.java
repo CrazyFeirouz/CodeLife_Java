@@ -1,4 +1,4 @@
-package basic.arrays.assignment;
+package basic.arrays.crl;
 
 /**
  * -*- coding: utf-8 -*-
@@ -15,10 +15,20 @@ public class ArrayReverse {
         }
 
         String temp;                                        //反转临时变量
-        for (int i = 0; i < array.length/2; i++) {          //开始反转
+
+        // 反转方式一
+
+//        for (int i = 0; i < array.length/2; i++) {          //开始反转
+//            temp = array[i];
+//            array[i] = array[array.length-i-1];
+//            array[array.length-i-1] = temp;
+//        }
+
+        // 反转方式二
+        for(int i = 0,j = array.length-1; i < j; i++, j--) {
             temp = array[i];
-            array[i] = array[array.length-i-1];
-            array[array.length-i-1] = temp;
+            array[i] = array[j];
+            array[j] = temp;
         }
 
         System.out.println("\n=========反转后=========");      //反转后输出
