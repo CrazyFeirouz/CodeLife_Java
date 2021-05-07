@@ -4,11 +4,9 @@
 **Java 学习记录 —— 记录相关学习内容**
 ****
 
-## 一、Java基础
+## 一、Java基础（basic）
 
-1. **Java基础语法（basic）**
-
-2. **Java运算符（operator）**
+1. **Java运算符（operator）**
 
     ****
 
@@ -21,7 +19,7 @@
             使用 & 和 位移运算 来实现
 
     ****
-3. **Java结构（选择、循环）（structure）**
+2. **Java结构（选择、循环）（structure）**
 
     ****
 
@@ -31,7 +29,7 @@
             使用不同的方式来查找质数
 
     ****
-4. **Java数组（arrays）**
+3. **Java数组（arrays）**
 
     ****
     1. **数组赋值（assignment）**
@@ -54,5 +52,16 @@
     
     ****
 
+## 二、面向对象（oop）
 
+1. **面向对象三大特征**
 
+    1. 封装性（encapsulation）
+    
+    2. 继承性（inheritance）
+    
+    3. **多态性（polymorphism）**
+
+## 零、测试（test）
+
+1. **基础语法测试（basic）**
