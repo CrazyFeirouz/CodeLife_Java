@@ -1,8 +1,6 @@
 package test.api.wrapper;
 
-import com.sun.org.apache.xpath.internal.operations.Or;
 import org.junit.Test;
-import test.api.object.InterviewTest1;
 
 public class WrapperTest {
 
