@@ -1,4 +1,4 @@
-package test.object;
+package test.api.object;
 
 import java.util.Date;
 
