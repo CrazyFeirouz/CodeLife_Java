@@ -30,10 +30,13 @@ public class InterviewTest2S {
          * 这里就有个知识点：
          *      在Integer类中，有个名为IntegerCache的内部类 —— Integer的缓存类
          *          IntegerCache会在Integer初始化时同时进行第一次初始化。
+         *
+         *          源码：
          *          private static class IntegerCache {
          *                  static final int low = -128;
          *                  static final int high;
          *                  static final Integer cache[];
+         *
          *          为啥要有这个类？ 为了提高性能：
          *              [-128,127] 范围内的Integer都被存储到了 cache[] 当中。
          *              如果我们使用自动装箱的方式，给Intefer赋值的范围在 -128~127中时，
