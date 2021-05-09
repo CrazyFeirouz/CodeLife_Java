@@ -25,7 +25,7 @@ class Graduate extends Student {
 
 /**
  * 测试 instanceof 所满足的情况
- * true的情况：a instanceof a类/a的直接父类或间接父类
+ * true的情况：a对象/变量 instanceof a对象的类/直接父类或间接父类
  */
 public class InstanceTest {
     public static void main(String[] args) {
