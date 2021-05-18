@@ -1,5 +1,8 @@
 package test.basic;
 
+/**
+ * 测试 += 和 =+ 的区别
+ */
 public class Test1 {
     public static void main(String[] args) {
         // +=运算符
