@@ -57,6 +57,8 @@
 1. **设计模式（pattern）**
 
     1. **创建型模式（creational）**
+        
+        1. **单例模式（Singleton）**： 饿汉式、懒汉式
 
     2. **结构型模式（structural）**
        
