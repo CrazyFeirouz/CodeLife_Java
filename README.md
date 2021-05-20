@@ -52,22 +52,22 @@
     
     ****
 
-## 二、面向对象（oop）
+## 二、设计思想（design）
 
-1. **面向对象三大特征**
+1. **设计模式（pattern）**
 
-    1. 封装性（encapsulation）
-    
-    2. 继承性（inheritance）
-    
-    3. **多态性（polymorphism）**
+    1. **创建型模式（creational）**
+
+    2. **结构型模式（structural）**
+       
+    3. **行为型模式（behavioral）**
 
 ## 零、测试（test）
 
-1. **基础语法测试（basic）**
+1. **Java 基础语法 相关测试（basic）**
 
-2. **面向对象测试（oop）**
+2. **Java 面向对象 相关测试（oop）**
 
-2. **Java API 相关测试（api）**
+3. **Java API 相关测试（api）**
 
-2. **Java 关键字 相关测试（keywords）**
+4. **Java 关键字 相关测试（keywords）**
