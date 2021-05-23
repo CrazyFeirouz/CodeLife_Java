@@ -63,6 +63,8 @@
     2. **结构型模式（structural）**
        
     3. **行为型模式（behavioral）**
+    
+        1. **模板方法模式（TemplateMethod） / 模板模式（Template）**：两个例子
 
 ## 零、测试（test）
 
