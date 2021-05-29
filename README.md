@@ -8,8 +8,6 @@
 
 1. **Java运算符（operator）**
 
-    ****
-
     + 逻辑运算符（logic）
 
         + BitwiseXOR ： *三种替换方式
@@ -17,21 +15,16 @@
 
         + BHDConverter ： *模拟进制转换
             使用 & 和 位移运算 来实现*
-
-    ****
+          
 2. **Java结构（选择、循环）（structure）**
-
-    ****
 
     + 嵌套循环（nestedloop）
 
         + PrimeNumber ： *查找质数(1-100000)
             使用不同的方式来查找质数*
-
-    ****
+          
 3. **Java数组（arrays）**
 
-    ****
     + 数组赋值（assignment）
 
         + PascalTriangle ：*杨辉三角
@@ -50,8 +43,6 @@
 
        + BubbleSort ： *冒泡排序*
     
-    ****
-
 ## 二、设计思想（design）
 
 1. **设计模式（pattern）**
