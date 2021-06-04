@@ -1,7 +1,7 @@
 package test.thread;
 
 /**
- * @description: 学习 线程的第一个练习
+ * @description: 学习1 线程的创建方式
  * @author: Feirouz
  * @date: 2021-06-04 16:16
  *
