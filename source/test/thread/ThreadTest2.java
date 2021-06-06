@@ -5,7 +5,7 @@ package test.thread;
  * @author: Feirouz
  * @date: 2021-06-04 17:23
  *
- * 多线程的创建 方式二：使用匿名子类的方式
+ * 多线程的创建 方式一：继承于Thread类 使用匿名子类的方式
  * 练习：创建两个线程，其中一个遍历100内的偶数，一个遍历100内的奇数
  */
 public class ThreadTest2 {
