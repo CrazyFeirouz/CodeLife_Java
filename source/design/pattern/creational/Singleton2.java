@@ -21,7 +21,7 @@ public class Singleton2 {
  * 单例模式 - 懒汉式实现
  * 懒汉式注意点：
  *      G - ① 会延迟对象的创建时间
- *      B - ② 目前的写法会导致线程不安全 ---> 后续使用多线程修改
+ *      B - ② 目前的写法会导致线程不安全 ---> 后续使用多线程修改 -- 已修改_2021.06.09
  */
 
 class Order {
@@ -33,11 +33,25 @@ class Order {
     private static Order instance = null;
 
     // 3.提供公共的静态方法，返回类的对象
+//    public static synchronized Order getInstance() {  //方式二：同步方法，隐藏的同步监视器：Order.class，效果和下面（↓）的一致，略低
     public static Order getInstace(){
-        if (instance == null){
-            instance = new Order();
+        // 方式一：同步代码块 - 解决方式一 ： 这样效率会略低，因为后续如果早就创建好了，每次还是要执行这个同步代码块，上面（↑）的同步方法也是
+//        synchronized (Order.class) {
+//            if (instance == null){
+//                instance = new Order();
+//            }
+//            return instance;
+//        }
+        // 方式一：同步代码块 - 解决方式二 ：对比上面的方法，效率会有所提高。
+        if (instance == null) {
+            synchronized (Order.class) {
+                if (instance == null) {
+                    instance = new Order();
+                }
+            }
         }
         return instance;
+
     }
 
 }
