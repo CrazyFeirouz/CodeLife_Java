@@ -44,7 +44,7 @@ class Clerk {
         if (proQuantity < 20) {
             proQuantity++;
             System.out.println(Thread.currentThread().getName() + "开始生产第" + proQuantity + "个产品");
-            notifyAll();
+            notify();
         } else {
             try {
                 wait();
