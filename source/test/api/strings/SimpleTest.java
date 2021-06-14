@@ -6,7 +6,7 @@ package test.api.strings;
  * @date: 2021-06-14 19:42
  *
  * 题目：将 “abc123” 转为 “a21cb3”
- *      优化：不论数组，保留第一位和最后一位，其余位数反转
+ *      优化：不论数组长度及内容，保留第一位和最后一位，其余位数反转
  */
 public class SimpleTest {
     public static void main(String[] args) {
