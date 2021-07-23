@@ -94,7 +94,7 @@ public class TCPTest1 {
         System.out.println(baos.toString());
 
         // 5. 关闭资源
-        baos.close();
+        baos.close();   // 这个其实可以不用关，关了以后一样能调用且不会报异常
         is.close();
         socket.close();
         ss.close();
