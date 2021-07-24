@@ -30,9 +30,9 @@ public class TCPTest2 {
 
         // 3.读取文件数据并写进os操作
         // 3.1 创建字节输入流
-        FileInputStream fos = new FileInputStream("source/test/net/socket/TCPTest2/clientFile/photo.jpg");
+        FileInputStream fis = new FileInputStream("source/test/net/socket/TCPTest2/clientFile/photo.jpg");
         // 3.2 创建缓存流
-        BufferedInputStream bis = new BufferedInputStream(fos);
+        BufferedInputStream bis = new BufferedInputStream(fis);
         BufferedOutputStream bos = new BufferedOutputStream(os);
         // 3.3 开始读取并写入bos操作
         byte[] buffer = new byte[1024];
