@@ -49,7 +49,7 @@ public class UDPTest1 {
         DatagramPacket packet = new DatagramPacket(buffer, 0, buffer.length);
 
         // 3. 接收数据
-        socket.receive(packet);
+        socket.receive(packet); //在接收到数据前会一直处于等待阶段
 
         // 4. 打印接收数据
         System.out.println(new String(packet.getData(), 0, packet.getLength()));
