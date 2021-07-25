@@ -26,7 +26,7 @@ public class URLTest2 {
 
         try {
             // 2.创建需要连接的url网址
-            URL url = new URL("https://github.com/CrazyFeirouz/CodeLife_Java/blob/main/source/test/net/URLTest1.java");
+            URL url = new URL("https://github.com/CrazyFeirouz/CodeLife_Java/blob/main/source/test/net/URLTest2/URLTest2.java");
 
             // 3.开始连接
             urlConnection = (HttpURLConnection) url.openConnection();
