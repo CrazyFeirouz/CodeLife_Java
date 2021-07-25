@@ -15,7 +15,7 @@ import java.net.URLConnection;
  * @date: 2021-07-25 19:56
  *
  * URL网络编程练习
- *  将网上的java文件下载到本地上
+ *  将网上的html文件下载到本地上
  */
 public class URLTest2 {
     public static void main(String[] args) throws IOException {
