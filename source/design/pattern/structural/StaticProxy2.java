@@ -9,7 +9,7 @@ package design.pattern.structural;
  *      为其他对象提供一种代理以控制对这个对象的访问。
  */
 
-public class Proxy2 {
+public class StaticProxy2 {
     public static void main(String[] args) {
         // 4. 创建 被代理类对象
         RealStar realStar = new RealStar();
