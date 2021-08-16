@@ -2,6 +2,9 @@
 
     Java 学习记录 —— 记录相关学习内容
 
+#### 个人学习思维导图
+
+    + Java基础 - 访问密码：feirouz [Java基础](https://www.processon.com/view/link/608194850791293ce80eabce)
 
 ### 一、Java基础（basic） 
 
