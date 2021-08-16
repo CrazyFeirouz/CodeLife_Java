@@ -1,4 +1,4 @@
-package test.net.socket.TCPTest2;
+package basic.net.socket.TCPTest2;
 
 import org.junit.Test;
 
@@ -6,7 +6,6 @@ import java.io.*;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.net.UnknownHostException;
 
 /**
  * @description: 实现TCP的网络编程练习2

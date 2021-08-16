@@ -1,4 +1,4 @@
-package test.io.practice1;
+package basic.io.practice1;
 
 import java.io.*;
 import java.util.HashMap;

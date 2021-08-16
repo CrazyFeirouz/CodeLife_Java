@@ -1,4 +1,4 @@
-package test.net.socket;
+package basic.net.socket;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package test.net.socket.TCPTest3;
+package basic.net.socket.TCPTest3;
 
 import org.junit.Test;
 

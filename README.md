@@ -121,10 +121,44 @@
 
     </details>
 
-## 二、设计思想（design）
+9. **Java 集合类（collection）**
+
+    <details>
+    <summary>无内容</summary>
+    </details>
+
+10. **Java I/O（io）**
+
+    <details>
+    <summary>内容</summary>
+
+    + practice1 ： *获取文本上每个字符出现的次数*
+    
+     </details>
+
+11. **Java 网络编程（net）**
+
+    <details>
+    <summary>内容</summary>
+
+    + 网络通信（socket）
+        + TCPTest1 ： *实现TCP的网络编程练习1*
+        + TCPTest2 ： *实现TCP的网络编程练习2*
+        + TCPTest3 ： *实现TCP的网络编程练习3*
+        + UDPTest1 ： *实现UDP协议的网络编程练习1*
+    + URL编程（url）      
+        + URLTest1 ： *URL网络编程练习1*
+        + URLTest2 ： *URL网络编程练习2*
+
+     </details>
+
+### 二、设计思想（design）
 
 1. **设计模式（pattern）**
-
+    
+    <details>
+    <summary>内容</summary>
+   
     + 创建型模式（creational）
         
         + 单例模式（Singleton）： *饿汉式、懒汉式*
@@ -137,8 +171,9 @@
     
         + 模板方法模式（TemplateMethod） / 模板模式（Template）：*两个例子*
 
-## 三、数据结构（dataStructures）
-## 零、测试（test）
+   </details>
+
+### 三、数据结构（dataStructures）
 
 
 
@@ -146,8 +181,7 @@
 
 
 
-+ Java 集合类 相关测试以及学习（collection）
 
-+ Java I/O 相关测试以及学习（io）
 
-+ Java 网络编程 相关测试以及学习（net）
+
+
