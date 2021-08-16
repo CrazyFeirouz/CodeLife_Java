@@ -14,23 +14,18 @@
 ### 一、Java基础（basic） 
 
 <details>
-<summary>章节</summary>
+<summary><b>1. Java运算符（operator）</b></summary>
 
-1. **Java运算符（operator）**
++ 常见运算符（general）
+    + Test ： *+= 和 =+ 的区别*
 
-    <details>
-    <summary>内容</summary>
-   
-    + 常见运算符（general）
-        + Test ： *+= 和 =+ 的区别*
-   
-    + 逻辑运算符（logic）
-        + BitwiseXOR ： *三种替换方式
-          重点讲 ^（异或运算）来实现替换方式*
-        + BHDConverter ： *模拟进制转换
-          使用 & 和 位移运算 来实现*
-          
-    </details>
++ 逻辑运算符（logic）
+    + BitwiseXOR ： *三种替换方式
+      重点讲 ^（异或运算）来实现替换方式*
+    + BHDConverter ： *模拟进制转换
+      使用 & 和 位移运算 来实现*
+      
+</details>
     
 2. **Java结构（选择、循环）（structure）**
    
@@ -170,19 +165,17 @@
 <details>
 <summary>章节</summary>
 
-1. **设计模式（pattern）**
-   
-    <details>
-    <summary>内容</summary>
-   
-    + 创建型模式（creational）
-        + 单例模式（Singleton）： *饿汉式、懒汉式*
-    + 结构型模式（structural）
-        + 代理模式（Proxy）：*四个例子（静态代理 /动态代理）*
-   + 行为型模式（behavioral）
-        + 模板方法模式（TemplateMethod） / 模板模式（Template）：*两个例子*
-    
-   </details>
+<details>
+<summary><b>1. 设计模式（pattern）</b></summary>
+
++ 创建型模式（creational）
+    + 单例模式（Singleton）： *饿汉式、懒汉式*
++ 结构型模式（structural）
+    + 代理模式（Proxy）：*四个例子（静态代理 /动态代理）*
++ 行为型模式（behavioral）
+    + 模板方法模式（TemplateMethod） / 模板模式（Template）：*两个例子*
+
+</details>
 
 </details>
 
