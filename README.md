@@ -2,16 +2,24 @@
 
     Java 学习记录 —— 记录相关学习内容
 
-#### 个人学习思维导图
+#### 
+
+***
 
 <details>
-<summary>Java基础</summary>
+<summary style="font-size: medium"><b>个人学习思维导图</b></summary>
 
-[访问密码：feirouz](https://www.processon.com/view/link/608194850791293ce80eabce)
++ Java基础
+  
+    访问密码：feirouz - 
+    [点击跳转思维导图](https://www.processon.com/view/link/608194850791293ce80eabce)
 
 </details>
 
-### 一、Java基础（basic） 
+***
+
+<details>
+<summary style="font-size: large"><b>一、Java基础（basic）</b></summary>
 
 <details>
 <summary><b>1. Java运算符（operator）</b></summary>
@@ -26,144 +34,125 @@
       使用 & 和 位移运算 来实现*
       
 </details>
-    
-2. **Java结构（选择、循环）（structure）**
-   
-    <details>
-    <summary>内容</summary>
-   
-    + 嵌套循环（nestedloop）
-        + PrimeNumber ： *查找质数(1-100000)
-          使用不同的方式来查找质数*
-          
-    </details>
-   
-3. **Java数组（arrays）**
 
-    <details>
-    <summary>内容</summary>
-   
-    + 数组赋值（assignment）
-        + PascalTriangle ： *杨辉三角
-          使用二维数组 打印10行 杨辉三角*
-    + 求数组平均值、最大最小值、和等（value）
-    + 数组的复制、反转、查找（线性查找、二分法查找）（crl）
-        + ArrayReverse ： *数组反转*
-        + ArrayLookup ： *数组查找
-          主要写线性查找、二分法查找*
-    + 数组排序（sort）
-        + BubbleSort ： *冒泡排序*
-    
-    </details>
+<details>
+<summary><b>2. Java结构（选择、循环）（structure）</b></summary>
 
-4. **Java 面向对象（oop）**
-    
-    <details>
-    <summary>内容</summary>
++ 嵌套循环（nestedloop）
+    + PrimeNumber ： *查找质数(1-100000)
+      使用不同的方式来查找质数*
+      
+</details>
 
-    + 接口（interface）
-        + Ball ： *接口题目1 - 判断对错*
-        + C ： *接口题目2 - 判断对错*
-        + StudyTest1 ： *JDK8接口改进 - 注意事项*
-    + 多态（polymorphism）
-        + FieldMethodTest ： *多态的简单使用*
-        + InstanceTest ： *测试 instanceof 所满足的情况*
-        + InterviewTest1 ： *多态中特别的注意事项*
-        + PersonTest ： *多态为何存在？*
-    + 混合（mixture）
-       + BankTest ： *对象的属性 赋值的顺序*
-       + LeafTest ： *题目1 - 判断如下代码执行顺序*
-       + SonTest ： *题目2 - 判断如下代码执行顺序？*
-   
-    </details>
+<details>
+<summary><b>3. Java数组（arrays）</b></summary>
 
-5. **Java API（api）**
-
-    <details>
-    <summary>内容</summary>
-
-   + Object（object）
-      + equal ： *== 和 equals() 的区别*
-      + ToStringTest ： *Object类中toString()的使用*
-   + String（strings）
-      + SimpleTest ： *String 与 char[] 之间的转换题目*
-      + StringTest ： *String的实例化方式*
-   + 包装类（wrapper）
-      + WrapperTest ： *类型转换*
-      + InterviewTest1 ： *题目1 - 关于包装类的面试题*
-      + InterviewTest2S ： *题目2 - 关于包装类的面试题*
-      + ScoreTest ： *题目3 - 根据题意实现代码*
-
-    </details>
-
-6. **Java 关键字（keywords）**
-
-    <details>
-    <summary>内容</summary>
-
-   + StaticTest ： *static 的应用场景*
-
-    </details>
-
-7. **Java 异常（throwable）**
-
-    <details>
-    <summary>内容</summary>
-
-   + ReturnExceptionDemo ： *finally的执行顺序测试*
-   + Test1 ： *常见的运行时异常 有什么？*
-
-    </details>
-
-8. **Java 多线程（thread）**
-
-    <details>
-    <summary>内容</summary>
-
-   + ProAndCost ： *线程通信的应用：经典例题：生产者/消费者*
-   + ThreadTest ： *多线程的创建 方式一：继承于Thread类*
-   + ThreadTest2 ： *多线程的创建 方式一：继承于Thread类 使用匿名子类的方式*
-   + ThreadTest3 ： *多线程的创建 方式二：实现Runnable接口*
-
-    </details>
-
-9. **Java 集合类（collection）**
-
-    <details>
-    <summary>无内容</summary>
-    </details>
-
-10. **Java I/O（io）**
-
-    <details>
-    <summary>内容</summary>
-
-    + practice1 ： *获取文本上每个字符出现的次数*
-    
-     </details>
-
-11. **Java 网络编程（net）**
-
-    <details>
-    <summary>内容</summary>
-
-    + 网络通信（socket）
-        + TCPTest1 ： *实现TCP的网络编程练习1*
-        + TCPTest2 ： *实现TCP的网络编程练习2*
-        + TCPTest3 ： *实现TCP的网络编程练习3*
-        + UDPTest1 ： *实现UDP协议的网络编程练习1*
-    + URL编程（url）      
-        + URLTest1 ： *URL网络编程练习1*
-        + URLTest2 ： *URL网络编程练习2*
-
-     </details>
++ 数组赋值（assignment）
+    + PascalTriangle ： *杨辉三角
+      使用二维数组 打印10行 杨辉三角*
++ 求数组平均值、最大最小值、和等（value）
++ 数组的复制、反转、查找（线性查找、二分法查找）（crl）
+    + ArrayReverse ： *数组反转*
+    + ArrayLookup ： *数组查找
+      主要写线性查找、二分法查找*
++ 数组排序（sort）
+    + BubbleSort ： *冒泡排序*
 
 </details>
 
-### 二、设计思想（design）
+<details>
+<summary><b>4. Java 面向对象（oop）</b></summary>
+
++ 接口（interface）
+    + Ball ： *接口题目1 - 判断对错*
+    + C ： *接口题目2 - 判断对错*
+    + StudyTest1 ： *JDK8接口改进 - 注意事项*
++ 多态（polymorphism）
+    + FieldMethodTest ： *多态的简单使用*
+    + InstanceTest ： *测试 instanceof 所满足的情况*
+    + InterviewTest1 ： *多态中特别的注意事项*
+    + PersonTest ： *多态为何存在？*
++ 混合（mixture）
+   + BankTest ： *对象的属性 赋值的顺序*
+   + LeafTest ： *题目1 - 判断如下代码执行顺序*
+   + SonTest ： *题目2 - 判断如下代码执行顺序？*
+
+</details>
 
 <details>
-<summary>章节</summary>
+<summary><b>5. Java API（api）</b></summary>
+
++ Object（object）
+  + equal ： *== 和 equals() 的区别*
+  + ToStringTest ： *Object类中toString()的使用*
++ String（strings）
+  + SimpleTest ： *String 与 char[] 之间的转换题目*
+  + StringTest ： *String的实例化方式*
++ 包装类（wrapper）
+  + WrapperTest ： *类型转换*
+  + InterviewTest1 ： *题目1 - 关于包装类的面试题*
+  + InterviewTest2S ： *题目2 - 关于包装类的面试题*
+  + ScoreTest ： *题目3 - 根据题意实现代码*
+
+</details>
+
+<details>
+<summary><b>6. Java 关键字（keywords）</b></summary>
+
++ StaticTest ： *static 的应用场景*
+
+</details>
+
+
+<details>
+<summary><b>7. Java 异常（throwable）</b></summary>
+
++ ReturnExceptionDemo ： *finally的执行顺序测试*
++ Test1 ： *常见的运行时异常 有什么？*
+
+</details>
+
+<details>
+<summary><b>8. Java 多线程（thread）</b></summary>
+
++ ProAndCost ： *线程通信的应用：经典例题：生产者/消费者*
++ ThreadTest ： *多线程的创建 方式一：继承于Thread类*
++ ThreadTest2 ： *多线程的创建 方式一：继承于Thread类 使用匿名子类的方式*
++ ThreadTest3 ： *多线程的创建 方式二：实现Runnable接口*
+
+</details>
+
+<details>
+<summary><b>9. Java 集合类（collection）</b></summary>
+</details>
+
+
+<details>
+<summary><b>10. Java I/O（io）</b></summary>
+
++ practice1 ： *获取文本上每个字符出现的次数*
+
+ </details>
+
+<details>
+<summary><b>11. Java 网络编程（net）</b></summary>
+
++ 网络通信（socket）
+    + TCPTest1 ： *实现TCP的网络编程练习1*
+    + TCPTest2 ： *实现TCP的网络编程练习2*
+    + TCPTest3 ： *实现TCP的网络编程练习3*
+    + UDPTest1 ： *实现UDP协议的网络编程练习1*
++ URL编程（url）      
+    + URLTest1 ： *URL网络编程练习1*
+    + URLTest2 ： *URL网络编程练习2*
+
+ </details>
+
+</details>
+
+***
+<details>
+<summary style="font-size: large"><b>二、设计思想（design）</b></summary>
 
 <details>
 <summary><b>1. 设计模式（pattern）</b></summary>
@@ -179,15 +168,14 @@
 
 </details>
 
-### 三、数据结构（dataStructures）
+***
 
 <details>
-<summary>章节</summary>
-
+<summary style="font-size: large"><b>三、数据结构（dataStructures）</b></summary>
 
 </details>
 
-
+***
 
 
 
