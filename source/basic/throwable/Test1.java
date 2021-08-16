@@ -1,4 +1,4 @@
-package basic.throwable.exception;
+package basic.throwable;
 
 import org.junit.Test;
 

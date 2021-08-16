@@ -104,9 +104,8 @@
     <details>
     <summary>内容</summary>
 
-   + 异常（exception）
-      + ReturnExceptionDemo ： *finally的执行顺序测试*
-      + Test1 ： *常见的运行时异常 有什么？*
+   + ReturnExceptionDemo ： *finally的执行顺序测试*
+   + Test1 ： *常见的运行时异常 有什么？*
 
     </details>
 

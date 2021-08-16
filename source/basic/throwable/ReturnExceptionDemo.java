@@ -1,4 +1,4 @@
-package basic.throwable.exception;
+package basic.throwable;
 
 /**
  * finally的执行顺序测试
