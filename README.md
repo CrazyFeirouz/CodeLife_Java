@@ -120,10 +120,10 @@
 >   <details>
 >   <summary><b>8. Java 多线程（thread）</b></summary>
 >
->   + ProAndCost ： *线程通信的应用：经典例题：生产者/消费者*
 >   + ThreadTest ： *多线程的创建 方式一：继承于Thread类*
 >   + ThreadTest2 ： *多线程的创建 方式一：继承于Thread类 使用匿名子类的方式*
 >   + ThreadTest3 ： *多线程的创建 方式二：实现Runnable接口*
+>   + ProAndCost ： *线程通信的应用：经典例题：生产者/消费者*
 >   
 >   </details>
 
