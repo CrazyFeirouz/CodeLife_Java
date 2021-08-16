@@ -18,6 +18,13 @@
 >   [点击跳转思维导图](https://www.processon.com/view/link/608194850791293ce80eabce)
 >   </details>
 
+>   <details>
+>   <summary>数据结构与算法 - Java版</summary>
+>
+>   访问密码（feirouz）→
+>   [点击跳转思维导图](https://www.processon.com/view/link/6118eb855653bb04f3311d83)
+>   </details>
+
 </details>
 
 ***
@@ -182,6 +189,13 @@
 <summary style="font-size: large"><b>三、数据结构（dataStructures）</b></summary>
 
 </details>
+
+>   <details>
+>   <summary><b>1. 稀疏数组（sparsearray）</b></summary>
+>
+>   + SparseArray ： *稀疏数组应用实例*
+>
+>   </details>
 
 ***
 
