@@ -1,4 +1,4 @@
-package test.oop.interfaces;
+package basic.oop.interfaces;
 
 /**
  * Java 8 -> 接口改进：

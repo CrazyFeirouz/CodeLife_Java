@@ -1,4 +1,4 @@
-package test.oop.mixture.test1;
+package basic.oop.mixture.test1;
 
 /**
  * 题目1

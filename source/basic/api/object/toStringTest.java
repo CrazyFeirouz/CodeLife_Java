@@ -1,4 +1,4 @@
-package test.api.object;
+package basic.api.object;
 
 /**
  * Object类中toString()的使用：

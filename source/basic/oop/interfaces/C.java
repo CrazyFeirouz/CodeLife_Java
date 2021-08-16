@@ -1,4 +1,4 @@
-package test.oop.interfaces;
+package basic.oop.interfaces;
 
 /**
  * 接口题目1

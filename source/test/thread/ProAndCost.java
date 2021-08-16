@@ -1,7 +1,5 @@
 package test.thread;
 
-import test.oop.interfaces.C;
-
 /**
  * @description: 线程通信的应用：经典例题：生产者/消费者
  * @author: Feirouz

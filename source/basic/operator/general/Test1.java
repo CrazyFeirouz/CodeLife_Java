@@ -1,4 +1,4 @@
-package test.basic;
+package basic.operator.general;
 
 /**
  * 测试 += 和 =+ 的区别

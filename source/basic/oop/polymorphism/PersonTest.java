@@ -1,4 +1,4 @@
-package test.oop.polymorphism;
+package basic.oop.polymorphism;
 
 public class PersonTest {
     public static void main(String[] args) {

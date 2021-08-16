@@ -1,4 +1,4 @@
-package test.oop.mixture.test1;
+package basic.oop.mixture.test1;
 
 /**
  *  对象可以赋值的位置

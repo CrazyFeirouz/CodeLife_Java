@@ -1,4 +1,4 @@
-package test.api.wrapper;
+package basic.api.wrapper;
 
 import org.junit.Test;
 

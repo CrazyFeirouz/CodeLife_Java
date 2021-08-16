@@ -1,4 +1,4 @@
-package test.api.object.equal;
+package basic.api.object.equal;
 
 import java.util.Date;
 

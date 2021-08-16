@@ -1,4 +1,4 @@
-package test.api.strings;
+package basic.api.strings;
 
 /**
  * @description: String 与 char[] 之间的转换题目

@@ -1,9 +1,5 @@
 package design.pattern.structural;
 
-import test.oop.interfaces.C;
-
-import java.sql.SQLOutput;
-
 /**
  * -*- coding: utf-8 -*-
  * @Author Feirouz

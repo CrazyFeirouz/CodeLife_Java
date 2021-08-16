@@ -1,4 +1,4 @@
-package test.oop.polymorphism;
+package basic.oop.polymorphism;
 
 class Base {
     int count = 10;
