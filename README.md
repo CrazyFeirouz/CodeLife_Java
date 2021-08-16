@@ -4,7 +4,12 @@
 
 #### 个人学习思维导图
 
-    + Java基础 - 访问密码：feirouz [Java基础](https://www.processon.com/view/link/608194850791293ce80eabce)
+<details>
+<summary>Java基础</summary>
+
+[访问密码：feirouz](https://www.processon.com/view/link/608194850791293ce80eabce)
+
+</details>
 
 ### 一、Java基础（basic） 
 
