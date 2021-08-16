@@ -30,7 +30,7 @@ public class TCPTest3 {
 
         // 3.读取文件数据并写进os操作
         // 3.1 创建字节输入流
-        FileInputStream fos = new FileInputStream("source/test/net/socket/TCPTest3/clientFile/photo.jpg");
+        FileInputStream fos = new FileInputStream("source/basic/net/socket/TCPTest3/clientFile/photo.jpg");
         // 3.2 创建缓存流
         BufferedInputStream bis = new BufferedInputStream(fos);
         // 3.3 开始读取并写入bos操作
@@ -81,7 +81,7 @@ public class TCPTest3 {
 
         // 4.读取客户端发来的文件
         // 4.1 创建字节输出流
-        FileOutputStream fos = new FileOutputStream("source/test/net/socket/TCPTest3/serverFIle/photo.jpg");
+        FileOutputStream fos = new FileOutputStream("source/basic/net/socket/TCPTest3/serverFile/photo.jpg");
         // 4.2. 创建缓存流
         BufferedOutputStream bos = new BufferedOutputStream(fos);
         // 4.3 开始读取文件并写入服务器本地操作
