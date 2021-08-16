@@ -29,7 +29,7 @@ public class TCPTest2 {
 
         // 3.读取文件数据并写进os操作
         // 3.1 创建字节输入流
-        FileInputStream fis = new FileInputStream("source/test/net/socket/TCPTest2/clientFile/photo.jpg");
+        FileInputStream fis = new FileInputStream("source/basic/net/socket/TCPTest2/clientFile/photo.jpg");
         // 3.2 创建缓存流
         BufferedInputStream bis = new BufferedInputStream(fis);
         BufferedOutputStream bos = new BufferedOutputStream(os);
@@ -60,7 +60,7 @@ public class TCPTest2 {
 
         // 4.读取客户端发来的文件
         // 4.1 创建字节输出流
-        FileOutputStream fos = new FileOutputStream("source/test/net/socket/TCPTest2/serverFIle/photo.jpg");
+        FileOutputStream fos = new FileOutputStream("source/basic/net/socket/TCPTest2/serverFile/photo.jpg");
         // 4.2. 创建缓存流
         BufferedInputStream bis = new BufferedInputStream(is);
         BufferedOutputStream bos = new BufferedOutputStream(fos);
