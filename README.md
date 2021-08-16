@@ -9,10 +9,12 @@
 <details>
 <summary style="font-size: medium"><b>个人学习思维导图</b></summary>
 
-+ Java基础
-  
-    访问密码（feirouz） - 
-    [点击跳转思维导图](https://www.processon.com/view/link/608194850791293ce80eabce)
+>   <details>
+>   <summary>Java基础</summary>
+>   
+>   访问密码（feirouz）→ 
+>   [点击跳转思维导图](https://www.processon.com/view/link/608194850791293ce80eabce)
+>   </details>
 
 </details>
 
@@ -21,7 +23,7 @@
 <details>
 <summary style="font-size: large"><b>一、Java基础（basic）</b></summary>
 
-> ***
+****
 
 >   <details>
 >   <summary><b>1. Java运算符（operator）</b></summary>
@@ -43,67 +45,67 @@
 >   + 嵌套循环（nestedloop）
 >       + PrimeNumber ： *查找质数(1-100000)
 >       使用不同的方式来查找质数*
-      
-</details>
+>      
+>   </details>
 
-<details>
-<summary><b>3. Java数组（arrays）</b></summary>
+>   <details>
+>   <summary><b>3. Java数组（arrays）</b></summary>
+>
+>   + 数组赋值（assignment）
+>       + PascalTriangle ： *杨辉三角
+>           使用二维数组 打印10行 杨辉三角*
+>   + 求数组平均值、最大最小值、和等（value）
+>   + 数组的复制、反转、查找（线性查找、二分法查找）（crl）
+>       + ArrayReverse ： *数组反转*
+>       + ArrayLookup ： *数组查找
+>           主要写线性查找、二分法查找*
+>   + 数组排序（sort）
+>       + BubbleSort ： *冒泡排序*
+>
+>   </details>
 
-+ 数组赋值（assignment）
-    + PascalTriangle ： *杨辉三角
-      使用二维数组 打印10行 杨辉三角*
-+ 求数组平均值、最大最小值、和等（value）
-+ 数组的复制、反转、查找（线性查找、二分法查找）（crl）
-    + ArrayReverse ： *数组反转*
-    + ArrayLookup ： *数组查找
-      主要写线性查找、二分法查找*
-+ 数组排序（sort）
-    + BubbleSort ： *冒泡排序*
+>   <details>
+>   <summary><b>4. Java 面向对象（oop）</b></summary>
+>   
+>   + 接口（interface）
+>       + Ball ： *接口题目1 - 判断对错*
+>       + C ： *接口题目2 - 判断对错*
+>       + StudyTest1 ： *JDK8接口改进 - 注意事项*
+>   + 多态（polymorphism）
+>       + FieldMethodTest ： *多态的简单使用*
+>       + InstanceTest ： *测试 instanceof 所满足的情况*
+>       + InterviewTest1 ： *多态中特别的注意事项*
+>       + PersonTest ： *多态为何存在？*
+>   + 混合（mixture）
+>      + BankTest ： *对象的属性 赋值的顺序*
+>      + LeafTest ： *题目1 - 判断如下代码执行顺序*
+>      + SonTest ： *题目2 - 判断如下代码执行顺序？*
+>
+>   </details>
 
-</details>
+>   <details>
+>   <summary><b>5. Java API（api）</b></summary>
+>   
+>   + Object（object）
+>     + equal ： *== 和 equals() 的区别*
+>     + ToStringTest ： *Object类中toString()的使用*
+>   + String（strings）
+>     + SimpleTest ： *String 与 char[] 之间的转换题目*
+>     + StringTest ： *String的实例化方式*
+>   + 包装类（wrapper）
+>     + WrapperTest ： *类型转换*
+>     + InterviewTest1 ： *题目1 - 关于包装类的面试题*
+>     + InterviewTest2S ： *题目2 - 关于包装类的面试题*
+>     + ScoreTest ： *题目3 - 根据题意实现代码*
+>   
+>   </details>
 
-<details>
-<summary><b>4. Java 面向对象（oop）</b></summary>
-
-+ 接口（interface）
-    + Ball ： *接口题目1 - 判断对错*
-    + C ： *接口题目2 - 判断对错*
-    + StudyTest1 ： *JDK8接口改进 - 注意事项*
-+ 多态（polymorphism）
-    + FieldMethodTest ： *多态的简单使用*
-    + InstanceTest ： *测试 instanceof 所满足的情况*
-    + InterviewTest1 ： *多态中特别的注意事项*
-    + PersonTest ： *多态为何存在？*
-+ 混合（mixture）
-   + BankTest ： *对象的属性 赋值的顺序*
-   + LeafTest ： *题目1 - 判断如下代码执行顺序*
-   + SonTest ： *题目2 - 判断如下代码执行顺序？*
-
-</details>
-
-<details>
-<summary><b>5. Java API（api）</b></summary>
-
-+ Object（object）
-  + equal ： *== 和 equals() 的区别*
-  + ToStringTest ： *Object类中toString()的使用*
-+ String（strings）
-  + SimpleTest ： *String 与 char[] 之间的转换题目*
-  + StringTest ： *String的实例化方式*
-+ 包装类（wrapper）
-  + WrapperTest ： *类型转换*
-  + InterviewTest1 ： *题目1 - 关于包装类的面试题*
-  + InterviewTest2S ： *题目2 - 关于包装类的面试题*
-  + ScoreTest ： *题目3 - 根据题意实现代码*
-
-</details>
-
-<details>
-<summary><b>6. Java 关键字（keywords）</b></summary>
-
-+ StaticTest ： *static 的应用场景*
-
-</details>
+>   <details>
+>   <summary><b>6. Java 关键字（keywords）</b></summary>
+>   
+>   + StaticTest ： *static 的应用场景*
+>   
+>   </details>
 
 
 <details>
