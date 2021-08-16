@@ -8,7 +8,6 @@
 <details>
 <summary>展开查看细节</summary>
 <pre><code>
-
 1. **Java运算符（operator）**
     + 逻辑运算符（logic）
         + BitwiseXOR ： *三种替换方式
@@ -30,7 +29,6 @@
           主要写线性查找、二分法查找*
     + 数组排序（sort）
         + BubbleSort ： *冒泡排序*
-    
 </code></pre>
 </details>
 
