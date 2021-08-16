@@ -9,6 +9,8 @@
 <details>
 <summary style="font-size: medium"><b>个人学习思维导图</b></summary>
 
+***
+
 >   <details>
 >   <summary>Java基础</summary>
 >   
@@ -107,50 +109,50 @@
 >   
 >   </details>
 
+>   <details>
+>   <summary><b>7. Java 异常（throwable）</b></summary>
+>
+>   + ReturnExceptionDemo ： *finally的执行顺序测试*
+>   + Test1 ： *常见的运行时异常 有什么？*
+>
+>   </details>
 
-<details>
-<summary><b>7. Java 异常（throwable）</b></summary>
+>   <details>
+>   <summary><b>8. Java 多线程（thread）</b></summary>
+>
+>   + ProAndCost ： *线程通信的应用：经典例题：生产者/消费者*
+>   + ThreadTest ： *多线程的创建 方式一：继承于Thread类*
+>   + ThreadTest2 ： *多线程的创建 方式一：继承于Thread类 使用匿名子类的方式*
+>   + ThreadTest3 ： *多线程的创建 方式二：实现Runnable接口*
+>   
+>   </details>
 
-+ ReturnExceptionDemo ： *finally的执行顺序测试*
-+ Test1 ： *常见的运行时异常 有什么？*
+>   <details>
+>   <summary><b>9. Java 集合类（collection）</b></summary>
+>
+>   + 暂无内容记录
+>   </details>
 
-</details>
+>   <details>
+>   <summary><b>10. Java I/O（io）</b></summary>
+>
+>   + practice1 ： *获取文本上每个字符出现的次数*
+>
+>   </details>
 
-<details>
-<summary><b>8. Java 多线程（thread）</b></summary>
-
-+ ProAndCost ： *线程通信的应用：经典例题：生产者/消费者*
-+ ThreadTest ： *多线程的创建 方式一：继承于Thread类*
-+ ThreadTest2 ： *多线程的创建 方式一：继承于Thread类 使用匿名子类的方式*
-+ ThreadTest3 ： *多线程的创建 方式二：实现Runnable接口*
-
-</details>
-
-<details>
-<summary><b>9. Java 集合类（collection）</b></summary>
-</details>
-
-
-<details>
-<summary><b>10. Java I/O（io）</b></summary>
-
-+ practice1 ： *获取文本上每个字符出现的次数*
-
- </details>
-
-<details>
-<summary><b>11. Java 网络编程（net）</b></summary>
-
-+ 网络通信（socket）
-    + TCPTest1 ： *实现TCP的网络编程练习1*
-    + TCPTest2 ： *实现TCP的网络编程练习2*
-    + TCPTest3 ： *实现TCP的网络编程练习3*
-    + UDPTest1 ： *实现UDP协议的网络编程练习1*
-+ URL编程（url）      
-    + URLTest1 ： *URL网络编程练习1*
-    + URLTest2 ： *URL网络编程练习2*
-
- </details>
+>   <details>
+>   <summary><b>11. Java 网络编程（net）</b></summary>
+>   
+>   + 网络通信（socket）
+>       + TCPTest1 ： *实现TCP的网络编程练习1*
+>       + TCPTest2 ： *实现TCP的网络编程练习2*
+>       + TCPTest3 ： *实现TCP的网络编程练习3*
+>       + UDPTest1 ： *实现UDP协议的网络编程练习1*
+>   + URL编程（url）      
+>       + URLTest1 ： *URL网络编程练习1*
+>       + URLTest2 ： *URL网络编程练习2*
+>   
+>   </details>
 
 </details>
 
@@ -158,17 +160,19 @@
 <details>
 <summary style="font-size: large"><b>二、设计思想（design）</b></summary>
 
-<details>
-<summary><b>1. 设计模式（pattern）</b></summary>
+***
 
-+ 创建型模式（creational）
-    + 单例模式（Singleton）： *饿汉式、懒汉式*
-+ 结构型模式（structural）
-    + 代理模式（Proxy）：*四个例子（静态代理 /动态代理）*
-+ 行为型模式（behavioral）
-    + 模板方法模式（TemplateMethod） / 模板模式（Template）：*两个例子*
-
-</details>
+>   <details>
+>   <summary><b>1. 设计模式（pattern）</b></summary>
+>   
+>   + 创建型模式（creational）
+>       + 单例模式（Singleton）： *饿汉式、懒汉式*
+>   + 结构型模式（structural）
+>       + 代理模式（Proxy）：*四个例子（静态代理 /动态代理）*
+>   + 行为型模式（behavioral）
+>       + 模板方法模式（TemplateMethod） / 模板模式（Template）：*两个例子*
+>   
+>   </details>
 
 </details>
 
