@@ -1,4 +1,4 @@
-package test.keywords;
+package basic.keywords;
 
 /**
  * static 的应用场景

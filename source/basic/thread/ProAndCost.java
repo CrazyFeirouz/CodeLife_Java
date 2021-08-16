@@ -1,4 +1,4 @@
-package test.thread;
+package basic.thread;
 
 /**
  * @description: 线程通信的应用：经典例题：生产者/消费者

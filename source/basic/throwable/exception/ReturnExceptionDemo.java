@@ -1,4 +1,4 @@
-package test.throwable.exception.unchecked;
+package basic.throwable.exception;
 
 /**
  * finally的执行顺序测试

@@ -1,4 +1,4 @@
-package test.thread;
+package basic.thread;
 
 /**
  * @description: 学习1 线程的创建方式

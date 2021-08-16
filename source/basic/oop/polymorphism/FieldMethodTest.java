@@ -1,5 +1,9 @@
 package basic.oop.polymorphism;
 
+/**
+ * 多态的简单使用
+ */
+
 class Base {
     int count = 10;
     public void display() {

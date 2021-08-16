@@ -1,5 +1,9 @@
 package basic.oop.polymorphism;
 
+/**
+ * 多态中特别的注意事项
+ */
+
 // 前提类
 class Base2 {
     public void add(int a, int... arr) {    // int[] arr 可看作 int... arr ，这里可看作重写

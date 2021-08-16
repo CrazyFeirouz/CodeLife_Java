@@ -1,5 +1,10 @@
 package basic.oop.polymorphism;
 
+/**
+ * 多态为何存在？
+ *  若无多态，实现下面方式会麻烦许多
+ */
+
 public class PersonTest {
     public static void main(String[] args) {
         System.out.println("=========多态的简单使用==========");
