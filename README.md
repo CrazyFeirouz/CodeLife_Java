@@ -5,6 +5,9 @@
 
 ### 一、Java基础（basic） 
 
+<details>
+<summary>章节</summary>
+
 1. **Java运算符（operator）**
 
     <details>
@@ -152,30 +155,36 @@
 
      </details>
 
+</details>
+
 ### 二、设计思想（design）
 
+<details>
+<summary>章节</summary>
+
 1. **设计模式（pattern）**
-    
+   
     <details>
     <summary>内容</summary>
    
     + 创建型模式（creational）
-        
         + 单例模式（Singleton）： *饿汉式、懒汉式*
-
     + 结构型模式（structural）
-        
         + 代理模式（Proxy）：*四个例子（静态代理 /动态代理）*
-       
    + 行为型模式（behavioral）
-    
         + 模板方法模式（TemplateMethod） / 模板模式（Template）：*两个例子*
-
+    
    </details>
+
+</details>
 
 ### 三、数据结构（dataStructures）
 
+<details>
+<summary>章节</summary>
 
+
+</details>
 
 
 
