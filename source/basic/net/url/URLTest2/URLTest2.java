@@ -23,7 +23,7 @@ public class URLTest2 {
 
         try {
             // 2.创建需要连接的url网址
-            URL url = new URL("https://github.com/CrazyFeirouz/CodeLife_Java/blob/main/source/test/net/URLTest2/URLTest2.java");
+            URL url = new URL("https://github.com/CrazyFeirouz/CodeLife_Java/blob/main/source/basic/net/url/URLTest2/URLTest2.java");
 
             // 3.开始连接
             urlConnection = (HttpURLConnection) url.openConnection();
@@ -33,7 +33,7 @@ public class URLTest2 {
             is = urlConnection.getInputStream();
 
             // 5.创建输出流
-            fos = new FileOutputStream("source/test/net/URLTest2/download/downloadHtml.html");
+            fos = new FileOutputStream("source/basic/net/url/URLTest2/download/downloadHtml.html");
 
             // 6.读取并写出文件操作
             byte[] buffer = new byte[1024];
