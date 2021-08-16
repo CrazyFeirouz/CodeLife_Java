@@ -18,7 +18,7 @@ public class URLTest1 {
 
     public static void main(String[] args) {
         try {
-            URL url = new URL("https://github.com/CrazyFeirouz/CodeLife_Java/blob/main/source/basic/net/url/URLTest1.java");
+            URL url = new URL(" https://github.com/CrazyFeirouz/CodeLife_Java/blob/main/source/basic/net/url/URLTest1.java");
 
             System.out.println("协议名：" + url.getProtocol());
             System.out.println("主机名：" + url.getHost());
