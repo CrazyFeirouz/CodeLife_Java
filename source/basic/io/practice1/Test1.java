@@ -29,8 +29,8 @@ public class Test1 {
         BufferedWriter bufferedWriter = null;
 
         try {
-            fileReader = new FileReader("source/test/io/practice1/hello.txt");
-            bufferedWriter = new BufferedWriter(new FileWriter("source/test/io/practice1/helloOut.txt"));
+            fileReader = new FileReader("source/basic/io/practice1/hello.txt");
+            bufferedWriter = new BufferedWriter(new FileWriter("source/basic/io/practice1/helloOut.txt"));
 
             HashMap<Character, Integer> map = new HashMap<>();
 
