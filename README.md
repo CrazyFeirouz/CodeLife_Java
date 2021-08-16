@@ -37,12 +37,12 @@
 >
 >   </details>
 
-<details>
-<summary><b>2. Java结构（选择、循环）（structure）</b></summary>
-
-+ 嵌套循环（nestedloop）
-    + PrimeNumber ： *查找质数(1-100000)
-      使用不同的方式来查找质数*
+>   <details>
+>   <summary><b>2. Java结构（选择、循环）（structure）</b></summary>
+>
+>   + 嵌套循环（nestedloop）
+>       + PrimeNumber ： *查找质数(1-100000)
+>       使用不同的方式来查找质数*
       
 </details>
 
