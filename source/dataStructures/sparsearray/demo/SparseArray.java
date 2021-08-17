@@ -3,9 +3,12 @@ package dataStructures.sparsearray.demo;
 import java.io.*;
 
 /**
- * @description:
+ * @description: 稀疏数组课后练习
  * @author: Feirouz
  * @date: 2021-08-17 15:42
+ *
+ * 读取（硬盘中的）稀疏数组数据
+ * 存储（内存中的）稀疏数组数据
  */
 public class SparseArray {
     // 将 普通二维数组 转换为 稀疏数组
