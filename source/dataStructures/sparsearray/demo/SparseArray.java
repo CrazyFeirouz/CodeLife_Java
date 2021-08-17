@@ -86,7 +86,7 @@ public class SparseArray {
         }
     }
 
-    // 读取 稀疏数组 - 若不存在，读取到的数组为null
+    // 读取 稀疏数组 - 若不存在，返回的数组为null
     public static int[][] read() {
         ObjectInputStream ois = null;
         Object o = null;
