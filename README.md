@@ -201,6 +201,7 @@
 >   <summary><b>2. 队列（queue）</b></summary>
 >
 >   + ArrayQueueDemo ： *使用数组模拟队列*
+>   + CircleQueueDemo ： *使用数组模拟环形队列*
 >
 >   </details>
 
