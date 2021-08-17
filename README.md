@@ -196,6 +196,13 @@
 >
 >   </details>
 
+>   <details>
+>   <summary><b>2. 队列（queue）</b></summary>
+>
+>   + ArrayQueueDemo ： *使用数组模拟队列*
+>
+>   </details>
+
 </details>
 
 ***
