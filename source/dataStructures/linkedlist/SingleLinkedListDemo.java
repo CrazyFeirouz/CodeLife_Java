@@ -21,7 +21,7 @@ public class SingleLinkedListDemo {
         linkedList.add(hero4);
         linkedList.add(hero3);
         linkedList.add(hero1);
-        linkedList.add(hero4);
+//        linkedList.add(hero4);
 
         /* 运行结果：
             HeroNode{no=2, name='小红', nickname='潮人'}
