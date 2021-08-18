@@ -15,12 +15,36 @@ public class SingleLinkedListDemo {
         HeroNode hero3 = new HeroNode(3, "小黑", "炒人");
         HeroNode hero4 = new HeroNode(4, "小白", "超忍");
 
-        // 创建要给链表
+        // 创建要给链表  【注意】这种方式不要重复加同一个对象，可能循环走不出来了
         SingleLinkedList linkedList = new SingleLinkedList();
-        linkedList.add(hero1);
         linkedList.add(hero2);
-        linkedList.add(hero3);
         linkedList.add(hero4);
+        linkedList.add(hero3);
+        linkedList.add(hero1);
+        linkedList.add(hero4);
+
+        /* 运行结果：
+            HeroNode{no=2, name='小红', nickname='潮人'}
+            HeroNode{no=4, name='小白', nickname='超忍'}
+            HeroNode{no=3, name='小黑', nickname='炒人'}
+            HeroNode{no=1, name='小明', nickname='超人'}
+         */
+
+//         创建要给链表
+//        SingleLinkedList linkedList = new SingleLinkedList();
+//        linkedList.addByOrder(hero2);
+//        linkedList.addByOrder(hero2);
+//        linkedList.addByOrder(hero4);
+//        linkedList.addByOrder(hero3);
+//        linkedList.addByOrder(hero1);
+
+        /* 运行结果：
+            编号已存在，编号[2]
+            HeroNode{no=1, name='小明', nickname='超人'}
+            HeroNode{no=2, name='小红', nickname='潮人'}
+            HeroNode{no=3, name='小黑', nickname='炒人'}
+            HeroNode{no=4, name='小白', nickname='超忍'}
+         */
 
         // 显示
         linkedList.showList();
@@ -34,10 +58,11 @@ class SingleLinkedList {
     private HeroNode head = new HeroNode(0, "", "");
 
     /**
-     * 添加节点到单向链表
+     * 添加节点到单向链表 - 1
      * 思路：（当不考虑编号顺序时）
      * 1. 找到当前链表的最后节点
      * 2. 将这个节点的next 指向新的节点
+     * 【注意】这种方式不要重复加一个同对象，可能循环走不出来了
      * @param heroNode
      */
     public void add(HeroNode heroNode) {
@@ -54,6 +79,38 @@ class SingleLinkedList {
         // 这时 temp 指向链表的最后
         // 将 新的 HeroNode 加入链表
         temp.next = heroNode;
+    }
+
+    /**
+     * 添加节点到单向链表 - 2
+     * 思路：（考虑编号顺序时）
+     * 1. 找到添加位置前一个节点
+     * 2. 将 添加的节点.next = 添加位置 前一个节点.next
+     * 3. 添加位置 前一个节点.next = 添加的节点
+     * @param heroNode
+     */
+    public void addByOrder(HeroNode heroNode) {
+        // 因为 head节点 不能动，因此我们需要一个辅助变量
+        HeroNode temp = head;
+        boolean flag = false;   // flag：表示添加的编号是否存在（若重复则为true）
+        while (true) {
+            if (temp.next == null) {    //判断是否是链尾
+                break;
+            }
+            if (heroNode.no < temp.next.no) {   // 位置判断，heroNode的编号必定要比heroNode.next的编号小
+                break;
+            } else if(heroNode.no == temp.next.no) {  // 说明想添加的编号已经存在
+                flag = true;
+                break;
+            }
+            temp = temp.next;   // 后移，遍历当前链表
+        }
+        if (flag) { // 说明重复编号
+            System.out.printf("编号已存在，编号[%d]\n", heroNode.no);
+        } else {    // 说明已找到位置插入
+            heroNode.next = temp.next;
+            temp.next = heroNode;
+        }
     }
 
     // 显示链表【遍历】
