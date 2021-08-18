@@ -16,12 +16,12 @@ public class SingleLinkedListDemo {
         HeroNode hero4 = new HeroNode(4, "小白", "超忍");
 
         // 创建要给链表  【注意】这种方式不要重复加同一个对象，可能循环走不出来了
-        SingleLinkedList linkedList = new SingleLinkedList();
-        linkedList.add(hero2);
-        linkedList.add(hero4);
-        linkedList.add(hero3);
-        linkedList.add(hero1);
+//        SingleLinkedList linkedList = new SingleLinkedList();
+//        linkedList.add(hero2);
 //        linkedList.add(hero4);
+//        linkedList.add(hero3);
+//        linkedList.add(hero1);
+////        linkedList.add(hero4);
 
         /* 运行结果：
             HeroNode{no=2, name='小红', nickname='潮人'}
@@ -30,18 +30,25 @@ public class SingleLinkedListDemo {
             HeroNode{no=1, name='小明', nickname='超人'}
          */
 
-//         创建要给链表
-//        SingleLinkedList linkedList = new SingleLinkedList();
-//        linkedList.addByOrder(hero2);
-//        linkedList.addByOrder(hero2);
-//        linkedList.addByOrder(hero4);
-//        linkedList.addByOrder(hero3);
-//        linkedList.addByOrder(hero1);
+        // 创建要给链表
+        SingleLinkedList linkedList = new SingleLinkedList();
+        linkedList.addByOrder(hero2);
+        linkedList.addByOrder(hero2);
+        linkedList.addByOrder(hero4);
+        linkedList.addByOrder(hero3);
+        linkedList.addByOrder(hero1);
+
+        // 修改数据
+        HeroNode newHeroNode1 = new HeroNode(2, "小李", "超刃");
+        HeroNode newHeroNode2 = new HeroNode(5, "小王", "钞人");
+        linkedList.update(newHeroNode1);
+        linkedList.update(newHeroNode2);
 
         /* 运行结果：
             编号已存在，编号[2]
+            没有找到你想要修改的编号[5]
             HeroNode{no=1, name='小明', nickname='超人'}
-            HeroNode{no=2, name='小红', nickname='潮人'}
+            HeroNode{no=2, name='小李', nickname='超刃'}
             HeroNode{no=3, name='小黑', nickname='炒人'}
             HeroNode{no=4, name='小白', nickname='超忍'}
          */
@@ -111,6 +118,33 @@ class SingleLinkedList {
             heroNode.next = temp.next;
             temp.next = heroNode;
         }
+    }
+
+    // 修改节点的信息，根据no编号来修改，即no编号不能改
+    // 说明
+    // 1. 根据 newHeroNodde 的 no 来修改即可
+    public void update(HeroNode newHeroNode) {
+        // 判断是否为空
+        if (head.next == null) {
+            System.out.println("当前链表为空，请添加数据后再来尝试");
+            return;
+        }
+        HeroNode temp = head.next;
+        while (true) {
+            if (temp == null) { // 到头了
+                // 找不到的情况
+                System.out.printf("没有找到你想要修改的编号[%d]\n", newHeroNode.no);
+                break;
+            }
+            if (temp.no == newHeroNode.no) {    // 找到了当前相同no的节点
+                // 开始修改数据
+                temp.nickname = newHeroNode.nickname;
+                temp.name = newHeroNode.name;
+                break;
+            }
+            temp = temp.next;
+        }
+
     }
 
     // 显示链表【遍历】
