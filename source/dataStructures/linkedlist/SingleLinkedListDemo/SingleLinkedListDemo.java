@@ -97,6 +97,11 @@ public class SingleLinkedListDemo {
         SingleLinkedList3.reverseList(linkedList.getHead());
         linkedList.showList();
 
+        System.out.println("=================================================");
+
+        // 逆序打印
+        SingleLinkedList4.reversePrint(linkedList.getHead());
+
 
     }
 
