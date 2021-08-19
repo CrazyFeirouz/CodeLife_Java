@@ -44,12 +44,13 @@ public class SingleLinkedListDemo {
         linkedList.update(newHeroNode1);
         linkedList.update(newHeroNode2);
 
+        linkedList.del(3);
+
         /* 运行结果：
             编号已存在，编号[2]
             没有找到你想要修改的编号[5]
             HeroNode{no=1, name='小明', nickname='超人'}
             HeroNode{no=2, name='小李', nickname='超刃'}
-            HeroNode{no=3, name='小黑', nickname='炒人'}
             HeroNode{no=4, name='小白', nickname='超忍'}
          */
 
@@ -140,6 +141,28 @@ class SingleLinkedList {
                 // 开始修改数据
                 temp.nickname = newHeroNode.nickname;
                 temp.name = newHeroNode.name;
+                break;
+            }
+            temp = temp.next;
+        }
+    }
+
+    // 删除节点
+    public void del(int no) {
+        // 判断是否为空
+        if (head.next == null) {
+            System.out.println("当前链表为空，请添加数据后再来尝试");
+            return;
+        }
+        // 非空，开始遍历
+        HeroNode temp = head;
+        while (true) {
+            if (temp.next == null) {    // 到头了
+                System.out.printf("找不到您需要删除的节点，编号[%d]\n", no);
+                break;
+            }
+            if (temp.next.no == no) {   // 找到了
+                temp.next = temp.next.next;
                 break;
             }
             temp = temp.next;
