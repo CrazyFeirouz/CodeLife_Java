@@ -44,6 +44,7 @@ public class SingleLinkedListDemo {
         linkedList.update(newHeroNode1);
         linkedList.update(newHeroNode2);
 
+        // 删除数据
         linkedList.del(3);
 
         /* 运行结果：
