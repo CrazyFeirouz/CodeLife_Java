@@ -1,5 +1,7 @@
 package dataStructures.linkedlist;
 
+import org.junit.Test;
+
 /**
  * @description: 带头结点的单链表应用实例
  * @author: Feirouz
@@ -8,6 +10,7 @@ package dataStructures.linkedlist;
  * 实现水浒传英雄排行榜管理
  */
 public class SingleLinkedListDemo {
+    // 基本使用
     public static void main(String[] args) {
         // 进行测试
         HeroNode hero1 = new HeroNode(1, "小明", "超人");
@@ -59,12 +62,46 @@ public class SingleLinkedListDemo {
         linkedList.showList();
     }
 
+    // 练手题目
+    @Test
+    public void test() {
+        // 进行测试
+        HeroNode hero1 = new HeroNode(1, "小明", "超人");
+        HeroNode hero2 = new HeroNode(2, "小红", "潮人");
+        HeroNode hero3 = new HeroNode(3, "小黑", "炒人");
+        HeroNode hero4 = new HeroNode(4, "小白", "超忍");
+
+        SingleLinkedList linkedList = new SingleLinkedList();
+        linkedList.addByOrder(hero2);
+        linkedList.addByOrder(hero4);
+        linkedList.addByOrder(hero3);
+        linkedList.addByOrder(hero1);
+
+        linkedList.showList();
+
+        System.out.println("=================================================");
+
+        // 获取链表有效节点个数
+        int length = SingleLinkedList.getLength(linkedList.getHead());
+        System.out.println(length);
+
+        // 获取倒数第二个节点
+        HeroNode lastIndexNode = SingleLinkedList.getLastIndexNode(linkedList.getHead(), 2);
+        System.out.println(lastIndexNode);
+
+
+    }
+
 }
 
 // 带头结点的单链表，管理我们的英雄
 class SingleLinkedList {
     // 先初始化一个头结点，头结点不操作，不存储具体数据
     private HeroNode head = new HeroNode(0, "", "");
+
+    public HeroNode getHead(){
+        return head;
+    }
 
     /**
      * 添加节点到单向链表 - 1
@@ -189,6 +226,44 @@ class SingleLinkedList {
             // 将temp后移
             temp = temp.next;
         }
+    }
+
+    /**
+     * 获取到单链表的节点的个数（如果是带头结点的链表，不统计头结点）
+     * @param heroNode 链表的头结点
+     * @return 返回链表有效节点个数
+     */
+    public static int getLength(HeroNode heroNode) {
+        if (heroNode.next == null) {    // 空链表
+            return 0;
+        }
+        int len = 0;
+        // 定义一个辅助变量
+        HeroNode temp = heroNode.next;
+        while (temp != null) {
+            len++;
+            temp = temp.next;
+        }
+        return len;
+    }
+
+    // 查找单链表中的倒数第k个节点
+    public static HeroNode getLastIndexNode(HeroNode heroNode, int index) {
+        if (heroNode.next == null) {    // 空链表
+            return null;
+        }
+        // 第一次遍历得到链表的长度
+        int len = SingleLinkedList.getLength(heroNode);
+        // 第二次遍历
+        // 先做index的校验
+        if (index <= 0 || index > len) {
+            System.out.println("输入下标不合理，请重新确认后输入");
+            return null;
+        }
+        for (int i = 0; i < len - index + 1; i++){  // 4-2+1=3，从头移动3下，到达第三个节点，即倒数第二个节点
+            heroNode = heroNode.next;
+        }
+        return heroNode;
     }
 }
 
