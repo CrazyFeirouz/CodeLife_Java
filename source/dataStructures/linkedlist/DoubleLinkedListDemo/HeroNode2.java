@@ -1,18 +1,19 @@
-package dataStructures.linkedlist.SingleLinkedListDemo;
+package dataStructures.linkedlist.DoubleLinkedListDemo;
 
 /**
- * @description: 单链表节点类
+ * @description: 双链表节点类
  * @author: Feirouz
  * @date: 2021-08-19 21:23
  */ // 定义HeroNode，每一个HeroNode 对象就是一个节点
-class HeroNode {
+class HeroNode2 {
     public int no;
     public String name;
     public String nickname;
-    public HeroNode next;   // 指向下一个节点
+    public HeroNode2 next;      // 指向下一个节点，默认为null
+    public HeroNode2 pre;       // 指向前一个节点，默认为null
 
     // 构造器
-    public HeroNode(int no, String name, String nickname) {
+    public HeroNode2(int no, String name, String nickname) {
         this.no = no;
         this.name = name;
         this.nickname = nickname;

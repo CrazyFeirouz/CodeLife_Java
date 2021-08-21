@@ -1,7 +1,7 @@
 package dataStructures.linkedlist.SingleLinkedListDemo;
 
 /**
- * @description:
+ * @description: 单链表类
  * @author: Feirouz
  * @date: 2021-08-19 21:22
  */ // 带头结点的单链表，管理我们的英雄
