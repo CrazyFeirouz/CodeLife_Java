@@ -209,6 +209,7 @@
 >   <summary><b>3. 链表（linkedlist）</b></summary>
 >
 >   + SingleLinkedListDemo ： *带头结点的单链表应用实例*
+>   + DoubleLinkedListDemo ： *双链表应用实例*
 >
 >   </details>
 
