@@ -1,5 +1,6 @@
 package dataStructures.linkedlist.DoubleLinkedListDemo;
 
+
 /**
  * @description: 双链表类
  * @author: Feirouz
@@ -38,6 +39,45 @@ public class DoubleLinkedList {
         // 形成一个双向链表
         temp.next = heroNode;
         heroNode.pre = temp;
+    }
+
+
+    /**
+     * 添加节点到单向链表 - 2
+     * 思路：（考虑编号顺序时）
+     * 1. 找到添加位置前一个节点
+     * 2. 将 添加的节点.next = 添加位置 前一个节点.next
+     * 3. 添加位置 前一个节点.next = 添加的节点
+     *
+     * @param heroNode
+     */
+    public void addByOrder(HeroNode2 heroNode) {
+        // 因为 head节点 不能动，因此我们需要一个辅助变量
+        HeroNode2 temp = head;
+        boolean flag = false;   // flag：表示添加的编号是否存在（若重复则为true）
+        while (true) {
+            if (temp.next == null) {    //判断是否是链尾
+                break;
+            }
+            if (heroNode.no < temp.next.no) {   // 位置判断，heroNode的编号必定要比heroNode.next的编号小
+                break;
+            } else if (heroNode.no == temp.next.no) {  // 说明想添加的编号已经存在
+                flag = true;
+                break;
+            }
+            temp = temp.next;   // 后移，遍历当前链表
+        }
+        if (flag) { // 说明重复编号
+            System.out.printf("编号已存在，编号[%d]\n", heroNode.no);
+        } else {    // 说明已找到位置插入
+            heroNode.next = temp.next;
+            temp.next = heroNode;
+            heroNode.pre = temp;
+            // 如果是最后一个节点，就不需要执行下面这一句话，否则会出现空指针
+            if (heroNode.next != null) {
+                heroNode.next.pre = heroNode;
+            }
+        }
     }
 
     /* 删除节点 - 与单链表基本一致，删除逻辑需要注意
