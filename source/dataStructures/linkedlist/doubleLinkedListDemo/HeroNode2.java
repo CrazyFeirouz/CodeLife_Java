@@ -1,4 +1,4 @@
-package dataStructures.linkedlist.DoubleLinkedListDemo;
+package dataStructures.linkedlist.doubleLinkedListDemo;
 
 /**
  * @description: 双链表节点类

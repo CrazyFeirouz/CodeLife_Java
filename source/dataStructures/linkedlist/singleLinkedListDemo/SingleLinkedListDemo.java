@@ -1,4 +1,4 @@
-package dataStructures.linkedlist.SingleLinkedListDemo;
+package dataStructures.linkedlist.singleLinkedListDemo;
 
 import org.junit.Test;
 

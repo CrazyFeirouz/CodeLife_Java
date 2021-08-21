@@ -1,4 +1,4 @@
-package dataStructures.linkedlist.SingleLinkedListDemo;
+package dataStructures.linkedlist.singleLinkedListDemo;
 
 /**
  * @description: 在之前正常的链表操作上新增功能

@@ -1,4 +1,4 @@
-package dataStructures.linkedlist.SingleLinkedListDemo;
+package dataStructures.linkedlist.singleLinkedListDemo;
 
 /**
  * @description: 单链表节点类

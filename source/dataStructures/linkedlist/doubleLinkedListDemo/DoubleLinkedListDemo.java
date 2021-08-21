@@ -1,4 +1,4 @@
-package dataStructures.linkedlist.DoubleLinkedListDemo;
+package dataStructures.linkedlist.doubleLinkedListDemo;
 
 import org.junit.Test;
 
