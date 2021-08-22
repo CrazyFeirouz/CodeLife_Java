@@ -2,8 +2,6 @@
 
     Java 学习记录 —— 记录相关学习内容
 
-#### 
-
 ***
 
 <details>
@@ -210,7 +208,7 @@
 >
 >   + singleLinkedListDemo ： *带头结点的单链表应用实例*
 >   + doubleLinkedListDemo ： *双链表应用实例*
->   + josephuDemo问题 ： *环形单链表应用实例*
+>   + josephuDemo ： *环形单链表应用实例*
 >
 >   </details>
 
