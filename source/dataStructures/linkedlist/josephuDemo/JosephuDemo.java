@@ -15,6 +15,7 @@ public class JosephuDemo {
         int len = linkedList.len();
         System.out.println(len);
 
+        // 约瑟夫问题的实现
         linkedList.countBoy(1,2);
     }
 }
