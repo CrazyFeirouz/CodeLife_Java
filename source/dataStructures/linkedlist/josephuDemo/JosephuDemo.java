@@ -9,7 +9,12 @@ public class JosephuDemo {
     public static void main(String[] args) {
         // 测试
         CircleSingleLinkedList linkedList = new CircleSingleLinkedList();
-        linkedList.addBoy(2);
+        linkedList.addBoy(25);
         linkedList.showList();
+
+        int len = linkedList.len();
+        System.out.println(len);
+
+        linkedList.countBoy(1,2);
     }
 }

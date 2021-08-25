@@ -50,5 +50,71 @@ public class CircleSingleLinkedList {
             }
             curBoy = curBoy.next;
         }
+        System.out.println();
+    }
+
+    // 求长度
+    public int len() {
+        if (first.next == null) {
+            return 0;
+        }
+        int len = 1;
+        Boy helper = first;
+        // 计算有多少个小孩
+        while (true) {
+            if (helper.next == first) {
+                break;
+            }
+            helper = helper.next;
+            len++;
+        }
+        return len;
+    }
+
+    /**
+     * 根据用户的输入，计算小孩出圈的顺序
+     * @param startNo   表示从第几个小孩开始数
+     * @param countNum  表示数几下
+     */
+    public void countBoy(int startNo, int countNum) {
+        // 先对数据进行校验
+        if(first == null || startNo < 1 || countNum > len()) {
+            System.out.println("参数有误，请重新输入");
+        }
+        // 中间变量 helper，指向 first后面
+        Boy helper = null;
+        // 小孩报数前，先让first 移动 (startNo-1) + (countNum-1) 次 （即开始位置+数数位置）
+        for (int i = 0; i < (startNo - 1) + (countNum - 1); i++) {
+            if ( i == (startNo - 1) + (countNum - 1) - 1) {    // helper位于first后面
+                // 中间变量 helper
+                helper = first;
+            }
+            first = first.next;
+        }
+        if (helper == null) {
+            System.out.println("程序错误");
+            return;
+        }
+        // 当小孩报数时，让first和helper指针同时移动 countNum-1 次，然后出圈
+        while (true) {
+            if (helper == first) {  // 判断是否为最后一个
+                System.out.printf("最后%d小孩出圈\n", first.no);
+                break;
+            }
+            // 这时 first 指向的节点，就是要出圈的小孩节点
+            System.out.printf("小孩%d出圈\n", first.no);
+            // 开始取出
+            first = first.next;
+            helper.next = first;
+
+
+            // 开始移动
+            for (int i = 0; i < countNum - 1; i++) {
+                first = first.next;
+                helper = helper.next;
+            }
+
+        }
+        System.out.println();
     }
 }
