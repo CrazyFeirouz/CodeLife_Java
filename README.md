@@ -216,6 +216,7 @@
 >   <summary><b>4. 栈（stack）</b></summary>
 >
 >   + ArrayStackDemo ： *栈的模拟*
+>   + LinkedStackDemo ： *使用链表模拟栈*
 >
 >   </details>
 
