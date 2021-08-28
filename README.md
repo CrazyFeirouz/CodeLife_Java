@@ -212,6 +212,13 @@
 >
 >   </details>
 
+>   <details>
+>   <summary><b>4. 栈（stack）</b></summary>
+>
+>   + ArrayStackDemo ： *栈的模拟*
+>
+>   </details>
+
 </details>
 
 ***
