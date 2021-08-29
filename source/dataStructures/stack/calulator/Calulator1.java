@@ -5,14 +5,14 @@ package dataStructures.stack.calulator;
  * @author: Feirouz
  * @date: 2021-08-29 16:55
  * 该程序有问题：
- *      1. 无法计算双位数
+ *      1. 无法计算多位数 (已解决)
  *      2. 无法计算负数
  *      3. 可计算运算符只有 "/+-*"
  */
 public class Calulator1 {
     public static void main(String[] args) {
         // 完成表达式的运算
-        String expression = "7+2*6-4";
+        String expression = "12+24*200+700";
         // 创建两个栈，数栈、符号栈
         ArrayStack2 numStack = new ArrayStack2(10);
         ArrayStack2 operStack = new ArrayStack2(10);
@@ -23,6 +23,7 @@ public class Calulator1 {
         int oper = 0;
         int res = 0;
         char ch = ' ';   // 将每次扫描得到的char保存到ch
+        String keepNum = "";    // 用于拼接 多位数
         // 开始while循环的扫描expression
         while(index < expression.length()) {   // 让 index + 1，并判断是否扫描到expression最后
             // 依次得到expression的每一个字符
@@ -49,7 +50,27 @@ public class Calulator1 {
                     }
                 }
             } else {    // 当前是数，直接进入数栈
-                numStack.push(ch - 48);
+                // 分析思路
+                // 1. 当处理多位数时，不能发现是一个数就立即入栈，因为他可能是多位数
+                // 2. 在处理数，需要expression的表达式的index。后在看一位，如果是数就进行扫面，如果是符号才入栈。
+                // 3. 因为我们需要定义一个变量 字符串，用于拼接
+
+                // 处理多位数
+                keepNum += ch;
+
+                if (index + 1 == expression.length()){  // 如果ch已经是expression的最后一位，就直接入栈
+                    numStack.push(Integer.parseInt(keepNum));
+                } else {
+                    // 判断下一个字符是不是数字，如果是数字，就继续扫描，如果是运算符，则入栈
+                    // 注意看后一位，不是index++
+                    if (operStack.isOper(expression.charAt(index+1))){
+                        // 如果后一位是运算符，则入栈 keepNum = "1" 或者 "123"
+                        numStack.push(Integer.parseInt(keepNum));
+                        keepNum = "";
+                    }
+                }
+                // 旧方案
+//                numStack.push(ch - 48);
             }
             // 循环变量迭代
             index++;
@@ -62,7 +83,6 @@ public class Calulator1 {
             res = numStack.cal(num1, num2, oper);
             numStack.push(res);     //结果入栈
         }
-
         int sum = numStack.pop();
         System.out.printf("表达式 %s = %d", expression, sum);
 
