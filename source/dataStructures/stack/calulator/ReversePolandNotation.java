@@ -1,4 +1,4 @@
-package dataStructures.stack;
+package dataStructures.stack.calulator;
 
 import org.junit.Test;
 
