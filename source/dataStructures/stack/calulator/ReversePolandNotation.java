@@ -118,7 +118,10 @@ public class ReversePolandNotation {
         return slist;
     }
 
-    // 将中缀表达式对应的List 转为 后缀表达式对应的List
+    /**
+     * 将中缀表达式对应的List 转为 后缀表达式对应的List
+     * 即 ArrayList[1,+,(,(,2,+,3,),*,4,-,5] => ArrayList[1,2,3,+,4,*,+,5,-]
+     */
     public static List<String> parseSuffixExpressionList(List<String> ls) {
         Stack<String> s1 = new Stack<>();
         // 说明：因为s2这个栈，在整个转换过程中，没有pop操作，而且后面我们还需要逆序输出
