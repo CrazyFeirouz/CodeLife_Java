@@ -5,7 +5,7 @@ package dataStructures.recursion;
  * @author: Feirouz
  * @date: 2022-01-21 17:29
  */
-public class puzzle {
+public class Puzzle {
     public static void main(String[] args) {
         // 先创建一个二维数组，模拟迷宫
         // 地图
