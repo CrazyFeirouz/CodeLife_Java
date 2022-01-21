@@ -120,7 +120,7 @@ public class ReversePolandNotation {
 
     /**
      * 将中缀表达式对应的List 转为 后缀表达式对应的List
-     * 即 ArrayList[1,+,(,(,2,+,3,),*,4,),-,5] => ArrayList[1,2,3,+,4,*,+,5,-]
+     * 即 ArrayList[2, *, 20, +, (, 30, +, 4, ), *, 5, -, 6] => ArrayList[2, 20, *, 30, 4, +, 5, *, +, 6, -]
      */
     public static List<String> parseSuffixExpressionList(List<String> ls) {
         Stack<String> s1 = new Stack<>();
