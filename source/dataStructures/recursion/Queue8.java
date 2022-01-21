@@ -47,7 +47,7 @@ public class Queue8 {
     /**
      * 查看当我们放置的皇后，是否和已经摆放的皇后有冲突
      * @param n 表示第n个皇后
-     * @return
+     * @return 返回是否有冲突状况
      */
     private boolean judge(int n) {
         for (int i = 0; i < n; i++) {
