@@ -7,6 +7,7 @@ import java.util.Map;
  * @author: Feirouz
  * @date: 2022-01-21 19:41
  */
+
 public class Queue8 {
     // 定义一个max表示共有多少个皇后
     int max = 8;
