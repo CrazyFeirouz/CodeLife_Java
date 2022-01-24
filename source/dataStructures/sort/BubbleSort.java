@@ -1,8 +1,12 @@
 package dataStructures.sort;
 
+import org.junit.Test;
+
 import java.lang.reflect.Array;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 
 /**
  * @description: 冒泡排序
@@ -12,16 +16,69 @@ import java.util.Arrays;
 public class BubbleSort {
     public static void main(String[] args) {
         int arr[] = {3, 9, -1, 10, -2};
+        int arr2[] = {3, -1, 6, 6, 8};
 
         // 拆开每步
 //        sortDismantle(arr);
 
+        System.out.println("使用冒泡排序排序arr");
         sort(arr);
+
+        System.out.println("使用优化后的冒泡排序排序arr2");
+        sortOptimize(arr2);
+    }
+
+    /**
+     * 测试冒泡排序速度
+     */
+    @Test
+    public void test1() {
+        // 测试一下冒泡排序的速度O(n²)，给8w个数据，测试
+        // 1. 创建一个80000个随机数的数组
+        int[] arr = new int[80000];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = (int)(Math.random() * 8000000);    // 生成[0,8000000)的数
+        }
+
+        Date startTime = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yy-MM-dd HH:mm:ss");
+        System.out.println("排序前的时间 - " + sdf.format(startTime));
+
+//        sort(arr);
+        sortOptimize(arr);
+
+        Date endTime = new Date();
+        System.out.println("排序后的时间 - " + sdf.format(endTime));
+    }
+
+    /**
+     * 冒泡排序优化
+     * @param arr 排序的数组
+     * 当一趟排序中，一次交换都没有发生过 => 已经排序完毕，可以提前结束
+     */
+    public static void sortOptimize(int[] arr){
+        boolean flag = false;       // 标识变量，标识是否进行过交换
+        for (int i = 0; i < arr.length - 1; i++){
+            for (int j = 0; j < arr.length - i - 1; j++){
+                if (arr[j] > arr[j+1]){
+                    swap(arr, j);
+                    flag = true;
+                }
+            }
+
+//            System.out.println("第" + (i+1) + "趟排序后的数组 - " + Arrays.toString(arr));
+
+            if (!flag){ // 在一趟排序中，一次交换都没有发生过
+                break;
+            }else { // 发生过交换，重置, 进行下次判断
+                flag = false;
+            }
+        }
     }
 
     /**
      * 冒泡排序 - O(n²)
-     * @param arr
+     * @param arr 排序的数组
      */
     public static void sort(int[] arr){
         for (int i = 0; i < arr.length - 1; i++){
@@ -31,7 +88,6 @@ public class BubbleSort {
                 }
             }
         }
-        System.out.println("排序后的数组 - " + Arrays.toString(arr));
     }
 
     /**
@@ -94,5 +150,4 @@ public class BubbleSort {
         arr[j] = arr[j+1];
         arr[j+1] = temp;
     }
-
 }
