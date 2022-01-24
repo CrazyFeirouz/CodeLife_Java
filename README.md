@@ -234,6 +234,7 @@
 >   <summary><b>6. 排序（sort）</b></summary>
 >
 >   + BubbleSort ： *冒泡排序*
+>   + SelectSort ： *选择排序*
 >
 >   </details>
 
