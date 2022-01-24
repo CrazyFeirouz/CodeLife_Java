@@ -63,7 +63,7 @@ public class SelectSort {
     }
 
     /**
-     * 了容易理解，我们把选择排序的演变过程给展示出来
+     * 为了容易理解，我们把选择排序的演变过程给展示出来
      * @param arr 需要排序的数组
      */
     public static void sortDismantle(int[] arr) {
