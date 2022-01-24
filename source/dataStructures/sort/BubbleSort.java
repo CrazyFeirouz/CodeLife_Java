@@ -42,15 +42,13 @@ public class BubbleSort {
             arr[i] = (int)(Math.random() * 8000000);    // 生成[0,8000000)的数
         }
 
-        Date startTime = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("yy-MM-dd HH:mm:ss");
-        System.out.println("排序前的时间 - " + sdf.format(startTime));
+        long starTime = System.currentTimeMillis();
 
 //        sort(arr);
         sortOptimize(arr);
 
-        Date endTime = new Date();
-        System.out.println("排序后的时间 - " + sdf.format(endTime));
+        long endTime = System.currentTimeMillis();
+        System.out.println("使用时间 - " + (endTime-starTime) + " ms");
     }
 
     /**
