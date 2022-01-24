@@ -235,6 +235,7 @@
 >
 >   + BubbleSort ： *冒泡排序*
 >   + SelectSort ： *选择排序*
+>   + InsertSort ： *插入排序*
 >
 >   </details>
 
