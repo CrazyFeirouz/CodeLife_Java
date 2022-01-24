@@ -23,9 +23,11 @@ public class BubbleSort {
 
         System.out.println("使用冒泡排序排序arr");
         sort(arr);
+        System.out.println("排序后 - " + Arrays.toString(arr));
 
         System.out.println("使用优化后的冒泡排序排序arr2");
         sortOptimize(arr2);
+        System.out.println("排序后 - " + Arrays.toString(arr2));
     }
 
     /**
