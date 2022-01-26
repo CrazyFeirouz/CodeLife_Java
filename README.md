@@ -236,6 +236,8 @@
 >   + BubbleSort ： *冒泡排序*
 >   + SelectSort ： *选择排序*
 >   + InsertSort ： *插入排序*
+>   + ShellSort1 ： *希尔排序 - 交换法*
+>   + ShellSort2 ： *希尔排序 - 移动法*
 >
 >   </details>
 
