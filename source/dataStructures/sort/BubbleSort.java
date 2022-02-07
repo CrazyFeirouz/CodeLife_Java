@@ -35,7 +35,7 @@ public class BubbleSort {
      */
     @Test
     public void test1() {
-        // 测试一下冒泡排序的速度O(n²)，给8w个数据，测试
+        // 测试一下冒泡排序的速度O(n²)，给8w个数据，测试 -- 9515ms
         // 1. 创建一个80000个随机数的数组
         int[] arr = new int[80000];
         for (int i = 0; i < arr.length; i++) {
