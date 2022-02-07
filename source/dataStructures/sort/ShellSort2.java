@@ -22,7 +22,7 @@ public class ShellSort2 {
      */
     @Test
     public void test1() {
-        // 测试一下插入排序的速度，给8w个数据，测试
+        // 测试一下插入排序的速度，给8w个数据，测试 -- 15ms
         // 快的有点起飞，比插入快了50倍左右
         // 1. 创建一个80000个随机数的数组
         int[] arr = new int[80000];
