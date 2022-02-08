@@ -1,4 +1,4 @@
-package dataStructures.sort.QuickSort;
+package dataStructures.sort.quickSort;
 
 import org.junit.Test;
 
