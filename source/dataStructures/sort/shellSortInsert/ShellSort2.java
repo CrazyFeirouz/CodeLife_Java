@@ -1,4 +1,4 @@
-package dataStructures.sort.ShellSortInsert;
+package dataStructures.sort.shellSortInsert;
 
 import org.junit.Test;
 
