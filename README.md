@@ -238,6 +238,7 @@
 >   + InsertSort ： *插入排序*
 >   + ShellSort1 ： *希尔排序 - 交换法*
 >   + ShellSort2 ： *希尔排序 - 移动法*
+>   + QuickSort ： *快速排序*
 >
 >   </details>
 
