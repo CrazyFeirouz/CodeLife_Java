@@ -3,7 +3,7 @@ package dataStructures.sort.shellSortSwap.practice;
 import java.util.Arrays;
 
 /**
- * @description: 希尔排序 - 交换法 - 1
+ * @description: 练习 - 希尔排序 - 交换法 - 1
  * @author: Feirouz
  * @date: 2022-02-08 12:46
  */
