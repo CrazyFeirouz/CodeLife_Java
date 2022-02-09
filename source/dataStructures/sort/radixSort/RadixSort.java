@@ -24,6 +24,7 @@ public class RadixSort {
     @Test
     public void test1() {
         // 使用时间 - 57 ms
+        // 看了上面的使用时间是不是感觉比快速那些慢，但如果你把8w=>800w，差距一下子就拉起来了。这个会快很多
         int[] arr = new int[80000];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = (int)(Math.random() * 8000000);    // 生成[0,8000000)的数
