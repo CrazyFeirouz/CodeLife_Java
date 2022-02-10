@@ -244,6 +244,12 @@
 >   + RadixSort ： *基数排序*
 >   </details>
 
+>   <details>
+>   <summary><b>7. 查找（search）</b></summary>
+>
+>   + SeqSearch ： *线性查找*
+>   </details>
+
 </details>
 
 ***
