@@ -238,7 +238,8 @@
 >   + InsertSort ： *插入排序*
 >   + ShellSort1 ： *希尔排序 - 交换法*
 >   + ShellSort2 ： *希尔排序 - 移动法*
->   + QuickSort ： *快速排序*
+>   + QuickSort ： *快速排序 - 尚硅谷版本*
+>   + QuickSort2 ： *快速排序 - LeetCode版本*
 >   + MergeSort ： *归并排序*
 >   + RadixSort ： *基数排序*
 >   </details>
