@@ -6,6 +6,7 @@ package dataStructures.search.binarySearch;
  * @date: 2022-02-11 19:01
  */
 
+// 这种不能查找多位同数值。只能找一个
 public class BinarySearch {
     public static void main(String[] args) {
         // 注意： 使用二分查找法的前提是 该数组时有序的。

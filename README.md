@@ -249,6 +249,7 @@
 >
 >   + SeqSearch ： *线性查找*
 >   + BinarySearch ： *二分查找*
+>   + BinarySearch2 ： *二分查找 - 可查找多位相同数版本*
 >   </details>
 
 </details>
