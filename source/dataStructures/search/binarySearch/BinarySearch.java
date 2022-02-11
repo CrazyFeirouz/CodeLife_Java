@@ -25,7 +25,7 @@ public class BinarySearch {
      * @return
      */
     public static int search(int[] arr, int left, int right, int findVal) {
-        if (left > right) {     // 找不到
+        if (left > right) {     // 找不到，不能带上“=”，因为确实有将范围缩小到1位数才比较出来的情况
             return -1;
         }
 
