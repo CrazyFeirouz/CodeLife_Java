@@ -248,6 +248,7 @@
 >   <summary><b>7. 查找（search）</b></summary>
 >
 >   + SeqSearch ： *线性查找*
+>   + BinarySearch ： *二分查找*
 >   </details>
 
 </details>
