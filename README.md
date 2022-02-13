@@ -250,6 +250,7 @@
 >   + SeqSearch ： *线性查找*
 >   + BinarySearch ： *二分查找*
 >   + BinarySearch2 ： *二分查找 - 解决查找多位数版*
+>   + InterpolationSearch ： *插值查找*
 >   </details>
 
 </details>
