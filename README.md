@@ -254,6 +254,12 @@
 >   + FibonacciSearch ： *斐波那契查找*
 >   </details>
 
+>   <details>
+>   <summary><b>8. 哈希表（hashtable）</b></summary>
+>
+>   + HashTableDemo ： *哈希表（散列）应用*
+>   </details>
+
 </details>
 
 ***
