@@ -14,6 +14,7 @@ public class BinarySearchTest3 {
         int num = search(arr, 0, arr.length - 1, -11);
         System.out.println(num);
 
+        
     }
 
     public static int search(int[] arr, int left, int right, int findVal) {
