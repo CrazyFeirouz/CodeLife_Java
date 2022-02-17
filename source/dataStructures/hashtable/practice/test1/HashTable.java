@@ -1,12 +1,12 @@
-package dataStructures.hashtable.hashTableDemo;
+package dataStructures.hashtable.practice.test1;
+
+import dataStructures.hashtable.hashTableDemo.Emp;
 
 /**
- * @description: 哈希表
+ * @description: 练习1（添加3个新功能）
  * @author: Feirouz
- * @date: 2022-02-16 23:30
+ * @date: 2022-02-17 14:49
  */
-
-// 创建HashTable， 管理多条链表
 public class HashTable {
     private EmpLinkedList[] empLinkedLists;
     private int size;
@@ -56,4 +56,21 @@ public class HashTable {
         return id % size;
     }
 
+    // 删除雇员
+    public void del(int id) {
+        int i = hashFun(id);
+        empLinkedLists[i].del(id);
+    }
+
+    // 修改雇员信息
+    public void edit(int id, String name) {
+        int i = hashFun(id);
+        empLinkedLists[i].edit(id, name);
+    }
+
+    // 按顺序添加雇员
+    public void addByOrder(Emp newEmp) {
+        int i = hashFun(newEmp.id);
+        empLinkedLists[i].addByOrder(newEmp);
+    }
 }
