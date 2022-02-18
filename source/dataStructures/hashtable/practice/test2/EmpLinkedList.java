@@ -63,6 +63,9 @@ public class EmpLinkedList {
 
     // 根据id删除雇员
     public void del(int id) {
+        if (head == null) {
+            return;
+        }
         Emp curEmp = head;
         if (curEmp.id == id) {  // 如果头节点就是
             head = curEmp.next;

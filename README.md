@@ -260,6 +260,12 @@
 >   + HashTableDemo ： *哈希表（散列）应用*
 >   </details>
 
+>   <details>
+>   <summary><b>9. 树（tree）</b></summary>
+>
+>   + BinaryTreeDemo ： *二叉树*
+>   </details>
+
 </details>
 
 ***
