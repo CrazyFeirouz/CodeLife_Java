@@ -26,13 +26,28 @@ public class BinaryTreeDemo {
         System.out.println("===========前序===========");
         binaryTree.preorder();      // 1 -> 2 -> 3 -> 4
 
-        // 1. 中序遍历
+        // 2. 中序遍历
         System.out.println("===========中序===========");
         binaryTree.inorder();       // 2 -> 1 -> 3 -> 4
 
-        // 1. 后序遍历
+        // 3. 后序遍历
         System.out.println("===========后序===========");
         binaryTree.postorder();     // 2 -> 4 -> 3 -> 1
+
+        // 4. 前序查找
+        System.out.println("==========前序查找==========");
+        HeroNode findVal = binaryTree.preorderSearch(3);
+        System.out.println(findVal);
+
+        // 5. 中序查找
+        System.out.println("==========中序查找==========");
+        HeroNode findVal2 = binaryTree.inorderSearch(31);
+        System.out.println(findVal2);
+
+        // 6. 前序查找
+        System.out.println("==========后序查找==========");
+        HeroNode findVal3 = binaryTree.postorderSearch(3);
+        System.out.println(findVal3);
     }
 }
 

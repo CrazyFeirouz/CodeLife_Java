@@ -98,4 +98,72 @@ public class HeroNode {
         // 3. 输出父节点
         System.out.println(this);
     }
+
+    // 前序遍历查找
+    public HeroNode preorderSearch(int no) {
+        // 1. 比较当前节点是否是我们需要的
+        if (this.no == no) {
+            return this;
+        }
+        // 2. 创建临时值 Temp
+        HeroNode resNode = null;
+        // 3. 判断该节点的左子节点是否为null
+        if (this.left != null) {                        // 不为null，左子节点递归查找
+            resNode = this.left.preorderSearch(no);
+        }
+        if (resNode != null) {                          // 说明找到了
+            return resNode;
+        }
+        // 4. 判断该节点的右子节点是否为null
+        if (this.right != null) {
+            resNode = this.right.preorderSearch(no);
+        }
+        // 5. 返回 Temp
+        return resNode;
+    }
+
+    // 中序查找
+    public HeroNode inorderSearch(int no) {
+        // 1. 创建临时值 Temp
+        HeroNode temp = null;
+        // 2. 判断该节点的左子节点是否为null
+        if (this.left != null) {
+            temp = this.left.inorderSearch(no);
+        }
+        if (temp != null) {
+            return temp;
+        }
+        // 3. 判断当前节点的no是否等于要查找的
+        if (this.no == no) {
+            return this;
+        }
+        // 4. 判断该节点的右子节点是否为null
+        if (this.right != null) {
+            temp = this.right.inorderSearch(no);
+        }
+        return temp;
+    }
+
+    // 后序查找
+    public HeroNode postorderSearch(int no) {
+        // 1. 创建临时值 Temp
+        HeroNode temp = null;
+        // 2. 判断该节点的左子节点是否为null
+        if (this.left != null) {
+            temp = this.left.postorderSearch(no);
+        }
+        if (temp != null) {
+            return temp;
+        }
+        // 3. 判断该节点的右子节点是否为null
+        if (this.right != null) {
+            temp = this.right.postorderSearch(no);
+        }
+        // 4. 判断当前节点的no是否等于要查找的
+        if (this.no == no) {
+            return this;
+        }
+        // 5. 返回 Temp
+        return temp;
+    }
 }

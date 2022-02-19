@@ -39,4 +39,33 @@ public class BinaryTree {
         }
     }
 
+    // 前序查找
+    public HeroNode preorderSearch(int no) {
+        if (this.root != null) {
+            return this.root.preorderSearch(no);
+        } else {
+            System.out.println("当前二叉树为空，无法查找！");
+            return null;
+        }
+    }
+
+    // 中序查找
+    public HeroNode inorderSearch(int no) {
+        if (this.root != null) {
+            return this.root.inorderSearch(no);
+        } else {
+            System.out.println("当前二叉树为空，无法查找！");
+            return null;
+        }
+    }
+
+    // 后序查找
+    public HeroNode postorderSearch(int no) {
+        if (this.root != null) {
+            return this.root.postorderSearch(no);
+        } else {
+            System.out.println("当前二叉树为空，无法查找！");
+            return null;
+        }
+    }
 }
