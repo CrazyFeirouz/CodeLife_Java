@@ -68,4 +68,18 @@ public class BinaryTree {
             return null;
         }
     }
+
+    // 删除节点
+    public void del(int no) {
+        if (root != null) {
+            // 如果只有一个root节点，这里立即判断root是不是要删除节点
+            if (root.getNo() == no) {
+                root = null;
+            } else {
+                root.del(no);
+            }
+        } else {
+            System.out.println("当前二叉树为空，无法查找！");
+        }
+    }
 }

@@ -48,6 +48,14 @@ public class BinaryTreeDemo {
         System.out.println("==========后序查找==========");
         HeroNode findVal3 = binaryTree.postorderSearch(3);
         System.out.println(findVal3);
+
+        // 7. 删除节点
+        System.out.println("==========删除节点==========");
+        binaryTree.del(2);
+
+        // 1. 前序遍历
+        System.out.println("===========前序===========");
+        binaryTree.preorder();      // 1 -> 2 -> 3 -> 4
     }
 }
 
