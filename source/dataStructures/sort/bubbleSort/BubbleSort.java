@@ -1,4 +1,4 @@
-package dataStructures.sort;
+package dataStructures.sort.bubbleSort;
 
 import org.junit.Test;
 

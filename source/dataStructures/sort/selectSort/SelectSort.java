@@ -1,4 +1,4 @@
-package dataStructures.sort;
+package dataStructures.sort.selectSort;
 
 import org.junit.Test;
 
