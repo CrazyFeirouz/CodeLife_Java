@@ -10,9 +10,9 @@ public class ArrBinaryTreeDemo {
         arrBinaryTree.preorder();
 
         System.out.println("======中序遍历=======");
-        arrBinaryTree.preorder();
+        arrBinaryTree.inorder();
 
         System.out.println("======后续遍历=======");
-        arrBinaryTree.preorder();
+        arrBinaryTree.postorder();
     }
 }
