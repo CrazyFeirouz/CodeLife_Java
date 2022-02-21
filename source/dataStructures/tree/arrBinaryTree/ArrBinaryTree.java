@@ -42,18 +42,18 @@ public class ArrBinaryTree {
         }
         // 向左递归遍历
         if ((index * 2 + 1) < arr.length) {
-            preorder(2 * index + 1);
+            inorder(2 * index + 1);
         }
         // 输出当前这个元素
         System.out.println(arr[index]);
         // 向右递归遍历
         if ((index * 2 + 2) < arr.length) {
-            preorder(2 * index + 2);
+            inorder(2 * index + 2);
         }
     }
 
     public void postorder() {
-        this.inorder(0);
+        this.postorder(0);
     }
 
     // 编写一个方法, 完成顺序存储二叉树的后序遍历
@@ -64,11 +64,11 @@ public class ArrBinaryTree {
         }
         // 向左递归遍历
         if ((index * 2 + 1) < arr.length) {
-            preorder(2 * index + 1);
+            postorder(2 * index + 1);
         }
         // 向右递归遍历
         if ((index * 2 + 2) < arr.length) {
-            preorder(2 * index + 2);
+            postorder(2 * index + 2);
         }
         // 输出当前这个元素
         System.out.println(arr[index]);
