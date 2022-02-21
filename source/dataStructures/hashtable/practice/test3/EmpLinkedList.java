@@ -1,11 +1,11 @@
-package dataStructures.hashtable.practice.test2;
+package dataStructures.hashtable.practice.test3;
 
 import dataStructures.hashtable.hashTableDemo.Emp;
 
 /**
- * @description: 哈希表 -> 链表
+ * @description: 练习3 - 哈希表应用实例
  * @author: Feirouz
- * @date: 2022-02-18
+ * @date: 2022-02-16 23:28
  */
 
 // 创建一个EmpLinkedList，表示链表
@@ -62,38 +62,23 @@ public class EmpLinkedList {
     }
 
     // 根据id删除雇员
-    public void del(int id) {
-        if (head == null) {
-            return;
-        }
-        Emp curEmp = head;
-        if (curEmp.id == id) {  // 如果头节点就是
-            head = curEmp.next;
-        } else {                // 从第二个以后
-            while (curEmp.next != null) {
-                if (curEmp.next.id == id) {
-                    curEmp.next = curEmp.next.next;
-                    break;
-                }
-                curEmp = curEmp.next;
+    public void delEmpById(int id) {
+         if (head.id == id) { // 当前就是要删除的节点
+            if (head.next == null) {    // 后面没数了
+                head = null;
+            } else {                    // 后面有数
+                head = head.next;
             }
-        }
-
-    }
-
-    // 根据id和name修改雇员
-    public void edit(int id, String name) {
-        Emp curEmp = head;
-        if (head.id == id) {
-            head.name = name;
-        } else {
-            while (curEmp.next != null) {
-                if (curEmp.next.id == id) {
-                    curEmp.next.name = name;
-                }
-                curEmp = curEmp.next;
-            }
-        }
+         } else {                       // 数在后面
+             Emp curEmp = head;
+             while (curEmp.next != null) {
+                 if (curEmp.next.id == id) {
+                     curEmp.next = curEmp.next.next;
+                     break;
+                 }
+                 curEmp = curEmp.next;
+             }
+         }
 
     }
 }

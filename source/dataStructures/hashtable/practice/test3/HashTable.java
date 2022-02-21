@@ -1,11 +1,11 @@
-package dataStructures.hashtable.practice.test2;
+package dataStructures.hashtable.practice.test3;
 
 import dataStructures.hashtable.hashTableDemo.Emp;
 
 /**
- * @description: 哈希表
+ * @description: 练习3 - 哈希表应用实例
  * @author: Feirouz
- * @date: 2022-02-18
+ * @date: 2022-02-16 23:30
  */
 
 // 创建HashTable， 管理多条链表
@@ -56,13 +56,7 @@ public class HashTable {
     // 删除雇员
     public void del(int id) {
         int index = hashFun(id);
-        empLinkedLists[index].del(id);
-    }
-
-    // 修改雇员
-    public void edit(int id, String name) {
-        int index = hashFun(id);
-        empLinkedLists[index].edit(id, name);
+        empLinkedLists[index].delEmpById(id);
     }
 
     // 编写散列函数，使用一个简单取模法
