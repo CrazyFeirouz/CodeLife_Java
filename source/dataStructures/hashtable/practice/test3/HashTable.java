@@ -59,6 +59,12 @@ public class HashTable {
         empLinkedLists[index].delEmpById(id);
     }
 
+    // 修改雇员
+    public void edit(int id, String name) {
+        int index = hashFun(id);
+        empLinkedLists[index].editEmpById(id, name);
+    }
+
     // 编写散列函数，使用一个简单取模法
     public int hashFun(int id) {
         return id % size;

@@ -81,4 +81,15 @@ public class EmpLinkedList {
          }
 
     }
+
+    // 根据id和name修改雇员
+    public void editEmpById(int id, String name) {
+        Emp curEmp = head;
+        while (curEmp != null) {
+            if (curEmp.id == id) {
+                curEmp.name = name;
+            }
+            curEmp = curEmp.next;
+        }
+    }
 }

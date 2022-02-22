@@ -94,6 +94,32 @@ public class EmpLinkedList {
                 curEmp = curEmp.next;
             }
         }
+    }
+
+    // 按id顺序添加雇员
+    public void addByOrder(Emp emp) {
+        // 不考虑id相等情况
+        if (head == null) {             // 如果头为null
+            head = emp;
+        } else {
+            Emp curEmp = head;
+            // 如果序号比id小
+            if (emp.id < curEmp.id) {       // 把emp添加进入head上
+                emp.next = curEmp;
+                head = emp;
+            } else {                        // 如果序号比id大
+                while (curEmp.next != null) {
+                    if (curEmp.next.id > emp.id) {
+                        break;
+                    }
+                    curEmp = curEmp.next;
+                }
+                // 到了应该插入的位置
+                emp.next = curEmp.next;
+                curEmp.next = emp;
+            }
+        }
+
 
     }
 }

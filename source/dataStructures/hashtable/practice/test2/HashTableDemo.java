@@ -35,7 +35,7 @@ public class HashTableDemo {
                     System.out.print("输入用户名称：");
                     String name = scanner.next();
                     Emp emp = new Emp(id, name);
-                    hashTable.add(emp);
+                    hashTable.addByOrder(emp);
                     break;
                 case "list":
                     hashTable.list();
