@@ -60,4 +60,27 @@ public class ThreadBinaryTree extends BinaryTree {
         // (3) 线索化右子树
         inorderThreadNodes(node.getRight());
     }
+
+    // 遍历线索化二叉树的方法
+    public void threadedList() {
+        // 定义一个变量，存储当前遍历的节点（后面要用），从root开始
+        HeroNode node = root;
+        while (node != null) {
+            // 循环找到的leftType == 1 的节点， 第一个找到的节点时8节点
+            // 后面随着遍历而变化，因为当leftType==1时，说明该节点是按照线索化处理后的有效节点
+            while (node.getLeftType() == 0) {
+                node = node.getLeft();
+            }
+            // 打印当前这个节点
+            System.out.println(node);
+            // 如果当前节点的右指针指向的是后继节点，就一直输出
+            while (node.getRightType() == 1) {
+                // 获取到当前节点的后继节点
+                node = node.getRight();
+                System.out.println(node);
+            }
+            // 替换这个遍历的节点
+            node = node.getRight();
+        }
+    }
 }
