@@ -1,4 +1,4 @@
-package dataStructures.hashtable.practice.test3;
+package dataStructures.hashtable.practice.test4;
 
 
 import dataStructures.hashtable.hashTableDemo.Emp;
@@ -6,7 +6,7 @@ import dataStructures.hashtable.hashTableDemo.Emp;
 import java.util.Scanner;
 
 /**
- * @description: 练习3 - 哈希表应用实例
+ * @description: 哈希表（散列）应用实例
  * @author: Feirouz
  * @date: 2022-02-16 20:41
  */
@@ -23,7 +23,6 @@ public class HashTableDemo {
             System.out.println("add: 添加雇员");
             System.out.println("list: 显示雇员");
             System.out.println("find: 查找雇员");
-            System.out.println("del: 删除雇员");
             System.out.println("edit: 修改雇员");
             System.out.println("exit: 退出系统");
             System.out.print("请输入你的操作：");
@@ -35,27 +34,23 @@ public class HashTableDemo {
                     System.out.print("输入用户名称：");
                     String name = scanner.next();
                     Emp emp = new Emp(id, name);
-                    hashTable.addByOrder(emp);
+                    hashTable.add(emp);
                     break;
                 case "list":
                     hashTable.list();
                     break;
-                case "del":
+                case "find":
                     System.out.print("输入用户id：");
-                    int delId = scanner.nextInt();
-                    hashTable.del(delId);
+                    int findId = scanner.nextInt();
+                    hashTable.find(findId);
                     break;
                 case "edit":
                     System.out.print("输入用户id：");
                     int editId = scanner.nextInt();
                     System.out.print("输入用户名称：");
                     String editName = scanner.next();
-                    hashTable.edit(editId, editName);
-                    break;
-                case "find":
-                    System.out.print("输入用户id：");
-                    int findId = scanner.nextInt();
-                    hashTable.find(findId);
+                    Emp editEmp = new Emp(editId, editName);
+                    hashTable.edit(editEmp);
                     break;
                 case "exit":
                     scanner.close();
