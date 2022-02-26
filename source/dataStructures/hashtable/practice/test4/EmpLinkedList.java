@@ -1,9 +1,9 @@
-package dataStructures.hashtable.practice.test3;
+package dataStructures.hashtable.practice.test4;
 
 import dataStructures.hashtable.hashTableDemo.Emp;
 
 /**
- * @description: 练习3 - 哈希表应用实例
+ * @description: 哈希表 -> 链表
  * @author: Feirouz
  * @date: 2022-02-16 23:28
  */
@@ -61,56 +61,16 @@ public class EmpLinkedList {
         return null;
     }
 
-    // 根据id删除雇员
-    public void delEmpById(int id) {
-         if (head.id == id) { // 当前就是要删除的节点
-            if (head.next == null) {    // 后面没数了
-                head = null;
-            } else {                    // 后面有数
-                head = head.next;
-            }
-         } else {                       // 数在后面
-             Emp curEmp = head;
-             while (curEmp.next != null) {
-                 if (curEmp.next.id == id) {
-                     curEmp.next = curEmp.next.next;
-                     break;
-                 }
-                 curEmp = curEmp.next;
-             }
-         }
-
-    }
-
-    // 根据id和name修改雇员
-    public void editEmpById(int id, String name) {
+    // 根据id修改雇员
+    public void editEmpById(Emp editEmp) {
+        // 辅助指针
         Emp curEmp = head;
         while (curEmp != null) {
-            if (curEmp.id == id) {
-                curEmp.name = name;
+            if (curEmp.id == editEmp.id) {
+                curEmp.name = editEmp.name;
+                break;
             }
             curEmp = curEmp.next;
-        }
-    }
-
-    // 按顺序添加雇员
-    public void addEmpByOrder(Emp newEmp) {
-        // 不考虑编号相等
-        // 先判断头是否为null
-        if (head == null) {                     // 头部为 null
-            head = newEmp;                      // 直接放入head
-        } else {                                // 头不为null，开始判断
-            Emp curEmp = head;                  // 新建指针
-            if (newEmp.id < curEmp.id) {        // 应该插入头部的情况
-                newEmp.next = curEmp;
-                head = newEmp;
-            } else {
-                while (curEmp.next != null && newEmp.id > curEmp.next.id) {     // 插入第二个及以上情况
-                    curEmp = curEmp.next;
-                }
-                newEmp.next = curEmp.next;
-                curEmp.next = newEmp;
-            }
         }
     }
 }

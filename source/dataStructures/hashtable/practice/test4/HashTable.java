@@ -1,9 +1,9 @@
-package dataStructures.hashtable.practice.test3;
+package dataStructures.hashtable.practice.test4;
 
 import dataStructures.hashtable.hashTableDemo.Emp;
 
 /**
- * @description: 练习3 - 哈希表应用实例
+ * @description: 哈希表
  * @author: Feirouz
  * @date: 2022-02-16 23:30
  */
@@ -50,25 +50,12 @@ public class HashTable {
         }else {
             System.out.println("已找到：" + empById);
         }
-
-    }
-
-    // 删除雇员
-    public void del(int id) {
-        int index = hashFun(id);
-        empLinkedLists[index].delEmpById(id);
     }
 
     // 修改雇员
-    public void edit(int id, String name) {
-        int index = hashFun(id);
-        empLinkedLists[index].editEmpById(id, name);
-    }
-
-    // 按顺序添加雇员
-    public void addByOrder(Emp emp) {
+    public void edit(Emp emp) {
         int index = hashFun(emp.id);
-        empLinkedLists[index].addEmpByOrder(emp);
+        empLinkedLists[index].editEmpById(emp);
     }
 
     // 编写散列函数，使用一个简单取模法

@@ -27,5 +27,9 @@ public class ThreadBinaryTreeDemp {
         System.out.println("10号节点的前驱: " + leftNode);    // 10号节点的前驱: HeroNode{no=3, name='jack'}
         HeroNode rightNode = node5.getRight();
         System.out.println("10号节点的后继: " + rightNode);   // 10号节点的后继: HeroNode{no=1, name='tom'}
+
+        // 使用线索化方式遍历
+        System.out.println("===========使用线索化的方式遍历==========");
+        threadBinaryTree.threadedList();
     }
 }
