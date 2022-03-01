@@ -35,7 +35,7 @@ public class QuickSort2Test5 {
             arr[i] = baseNum;
 
             // 向左递归
-            sort(arr, left, i - 1);
+            sort(arr, left, i);
             // 向右递归
             sort(arr, i + 1, right);
         }

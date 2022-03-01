@@ -3,49 +3,51 @@ package dataStructures.sort.mergeSort.practice;
 import java.util.Arrays;
 
 /**
- * @description: 练习6 - 归并排序 (丝滑)
+ * @description: 练习7 - 归并排序
  * @author: Feirouz
- * @date: 2022-02-25 19:08
+ * @date: 2022-03-01 18:48
  */
-public class MergeSortTest6 {
+public class MergeSortTest7 {
     public static void main(String[] args) {
         int[] arr = {6,8,1,2,3,-4,8,-9,5,10};
-        sort(arr, 0, arr.length - 1, new int[arr.length]);
+        sort(arr, 0, arr.length-1, new int[arr.length]);
         System.out.println(Arrays.toString(arr));
     }
 
     public static void sort(int[] arr, int left, int right, int[] temp) {
         if (left < right) {
             int mid = (left + right) / 2;
-            // 分
+            // 向左
             sort(arr, left, mid, temp);
+            // 向右
             sort(arr, mid + 1, right, temp);
 
-            // 治
-            int index = 0;
             int i = left;
             int j = mid + 1;
+            int index = 0;
             while (i <= mid && j <= right) {
                 if (arr[i] < arr[j]) {
                     temp[index] = arr[i];
                     i++;
-                }else {
+//                } else if (arr[j] < arr[i]) {     // 这次的问题出在这里： 如果相等呢？
+                } else {
                     temp[index] = arr[j];
                     j++;
                 }
                 index++;
             }
-            while (i <= mid) {
-                temp[index] = arr[i];
-                i++;
+            for (int k = i; k <= mid; k++) {
+                temp[index] = arr[k];
                 index++;
             }
-            while (j <= right) {
-                temp[index] = arr[j];
-                j++;
+            for (int k = j; k <= right; k++) {
+                temp[index] = arr[k];
+                index++;
             }
-            for (int k = 0; k < index; k++) {
-                arr[left + k] = temp[k];
+            int index2 = 0;
+            for (int k = left; k < left + index; k++) {
+                arr[k] = temp[index2];
+                index2++;
             }
         }
     }
