@@ -73,4 +73,31 @@ public class EmpLinkedList {
             curEmp = curEmp.next;
         }
     }
+
+    // 按照顺序添加雇员
+    public void addEmpByOrder(Emp emp) {
+        // 不考虑id相等
+        // 判断head是否为null
+        if (head == null) {
+            head = emp;
+        } else {        // 头不为null
+            // 插入在头节点上
+            Emp curEmp = head;
+            if (emp.id < curEmp.id) {
+                emp.next = curEmp;
+                head = emp;
+            }
+            // 插入到头节点后
+            else {
+                while (curEmp.next != null && emp.id > curEmp.next.id) {
+                    curEmp = curEmp.next;
+                }
+                // 找到了
+                emp.next = curEmp.next;
+                curEmp.next = emp;
+            }
+
+        }
+
+    }
 }

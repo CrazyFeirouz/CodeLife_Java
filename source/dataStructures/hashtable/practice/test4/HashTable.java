@@ -58,6 +58,12 @@ public class HashTable {
         empLinkedLists[index].editEmpById(emp);
     }
 
+    // 按顺序添加雇员
+    public void addByOrder(Emp emp) {
+        int index = hashFun(emp.id);
+        empLinkedLists[index].addEmpByOrder(emp);
+    }
+
     // 编写散列函数，使用一个简单取模法
     public int hashFun(int id) {
         return id % size;
