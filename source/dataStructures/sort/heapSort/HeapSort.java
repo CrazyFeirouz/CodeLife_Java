@@ -1,5 +1,7 @@
 package dataStructures.sort.heapSort;
 
+import org.junit.Test;
+
 import java.util.Arrays;
 
 /**
@@ -16,6 +18,29 @@ public class HeapSort {
 
 //        sort(arr);
 //        System.out.println(Arrays.toString(arr));
+    }
+
+    /**
+     * 测试插入排序速度
+     */
+    @Test
+    public void test1() {
+        // 测试一下堆排序的速度，给8w个数据，测试 -- 12 ms
+        // 测试800w -- 1646 ms
+        // 正常的版本应该是两层for，且每次都是交换。有点像反向的冒泡
+        // 比之前的选择排序又快了2-4倍左右（看了下弹幕大部分和我一致，但老师是和选择同速，也有少部分选择更快）
+        // 1. 创建一个80000个随机数的数组
+        int[] arr = new int[8000000];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = (int)(Math.random() * 8000000);    // 生成[0,8000000)的数
+        }
+
+        long starTime = System.currentTimeMillis();
+
+        sort(arr);
+
+        long endTime = System.currentTimeMillis();
+        System.out.println("使用时间 - " + (endTime-starTime) + " ms");
     }
 
     // 编写一个堆排序的方法 - 为了容易理解，我们把堆排序的演变过程给展示出来
