@@ -3,7 +3,7 @@ package dataStructures.sort.shellSortInsert.practice;
 import java.util.Arrays;
 
 /**
- * @description:
+ * @description: 练习6 - 希尔排序插入法
  * @author: Feirouz
  * @date: 2022-03-05 16:06
  */
