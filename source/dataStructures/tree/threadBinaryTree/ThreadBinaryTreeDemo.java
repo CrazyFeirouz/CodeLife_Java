@@ -1,6 +1,6 @@
 package dataStructures.tree.threadBinaryTree;
 
-public class ThreadBinaryTreeDemp {
+public class ThreadBinaryTreeDemo {
     public static void main(String[] args) {
         // 测试一把中序线索二叉树的功能
         HeroNode root = new HeroNode(1, "tom");
