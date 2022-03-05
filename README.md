@@ -263,7 +263,9 @@
 >   <details>
 >   <summary><b>9. 树（tree）</b></summary>
 >
->   + BinaryTreeDemo ： *二叉树*
+>   + BinaryTree ： *二叉树*
+>   + ThreadBinaryTree ： *线索化二叉树*
+>   + HuffmanTree ： *赫夫曼树*
 >   </details>
 
 </details>
