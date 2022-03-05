@@ -1,4 +1,4 @@
-package dataStructures.tree.threadBinaryTreeDemo;
+package dataStructures.tree.threadBinaryTree;
 
 public class ThreadBinaryTreeDemp {
     public static void main(String[] args) {

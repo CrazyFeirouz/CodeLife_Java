@@ -1,6 +1,6 @@
-package dataStructures.tree.threadBinaryTreeDemo;
+package dataStructures.tree.threadBinaryTree;
 
-import dataStructures.tree.binaryTreeDemo.BinaryTree;
+import dataStructures.tree.binaryTree.BinaryTree;
 
 /**
  * @description: 线索二叉树 - 重复利用BinaryTree一下

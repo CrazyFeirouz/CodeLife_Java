@@ -1,4 +1,4 @@
-package dataStructures.tree.binaryTreeDemo;
+package dataStructures.tree.binaryTree;
 
 /**
  * @description: 二叉树

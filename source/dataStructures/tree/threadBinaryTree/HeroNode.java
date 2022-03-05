@@ -1,7 +1,7 @@
-package dataStructures.tree.binaryTreeDemo;
+package dataStructures.tree.threadBinaryTree;
 
 /**
- * @description: 二叉树的节点 - HerNode节点
+ * @description: 线索二叉树的节点 - 相对于二叉树, 线索二叉树新增了一些内容
  * @author: Feirouz
  * @date: 2022-02-18 20:52
  */
@@ -10,6 +10,11 @@ public class HeroNode {
     private String name;
     private HeroNode left;
     private HeroNode right;
+    // 说明 - 相对于二叉树, 线索二叉树新增内容
+    // 1. 如果 leftType == 0 表示指向的是 左子树, 如果 1 则表示指向前驱节点
+    // 2. 如果 rightType == 0 表示指向的是 右子树, 如果 1 则表示指向后继节点
+    private int leftType;
+    private int rightType;
 
     // 左子节点 和 右子节点 默认为 null
     public HeroNode(int no, String name) {
@@ -47,6 +52,22 @@ public class HeroNode {
 
     public void setRight(HeroNode right) {
         this.right = right;
+    }
+
+    public int getLeftType() {
+        return leftType;
+    }
+
+    public void setLeftType(int leftType) {
+        this.leftType = leftType;
+    }
+
+    public int getRightType() {
+        return rightType;
+    }
+
+    public void setRightType(int rightType) {
+        this.rightType = rightType;
     }
 
     @Override

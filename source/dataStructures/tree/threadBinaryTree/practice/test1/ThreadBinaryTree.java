@@ -1,7 +1,7 @@
-package dataStructures.tree.threadBinaryTreeDemo.practice.test1;
+package dataStructures.tree.threadBinaryTree.practice.test1;
 
-import dataStructures.tree.binaryTreeDemo.BinaryTree;
-import dataStructures.tree.threadBinaryTreeDemo.HeroNode;
+import dataStructures.tree.binaryTree.BinaryTree;
+import dataStructures.tree.threadBinaryTree.HeroNode;
 
 /**
  * @description: 练习1 - 中序线索化二叉树

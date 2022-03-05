@@ -1,7 +1,7 @@
-package dataStructures.tree.threadBinaryTreeDemo.practice.test1;
+package dataStructures.tree.threadBinaryTree.practice.test1;
 
-import dataStructures.tree.threadBinaryTreeDemo.HeroNode;
-import dataStructures.tree.threadBinaryTreeDemo.ThreadBinaryTree;
+import dataStructures.tree.threadBinaryTree.HeroNode;
+import dataStructures.tree.threadBinaryTree.ThreadBinaryTree;
 
 /**
  * @description:
@@ -26,7 +26,7 @@ public class ThreadBinaryTreeDemo {
         node3.setLeft(node6);
 
         // 测试中序线索化
-        dataStructures.tree.threadBinaryTreeDemo.ThreadBinaryTree threadBinaryTree = new ThreadBinaryTree();
+        dataStructures.tree.threadBinaryTree.ThreadBinaryTree threadBinaryTree = new ThreadBinaryTree();
         threadBinaryTree.setRoot(root);
         threadBinaryTree.inorderThreadNodes();
 
