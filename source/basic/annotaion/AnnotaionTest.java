@@ -9,7 +9,7 @@ import java.lang.annotation.*;
  */
 
 @MyAnnotation(schools = {"小学","中学"})
-public class MetaAnnotaionTest {
+public class AnnotaionTest {
 
     // 注解可以显式赋值，如果没有默认值，则必须给注解参数赋值
     @MyAnnotation(name = "ccc", schools = {"小学","中学"})
