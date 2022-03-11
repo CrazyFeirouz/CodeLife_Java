@@ -7,7 +7,7 @@ import java.util.Arrays;
  * @author: Feirouz
  * @date: 2022-02-15 13:56
  */
-public class RaidxSortTest4 {
+public class RadixSortTest4 {
     public static void main(String[] args) {
         int[] arr = {6,8,1,2,3,4,8,9,5,10};
 
