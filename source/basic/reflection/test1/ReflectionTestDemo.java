@@ -12,6 +12,7 @@ public class ReflectionTestDemo {
         Class c1 = Class.forName("basic.reflection.test1.User");
         System.out.println(c1);         // class basic.reflection.test1.User
         Class c2 = Class.forName("basic.reflection.test1.User");
-        System.out.println(c1 == c2);   // 一个类在内存中，只有一个Class对象
+        // 一个类在内存中，只有一个Class对象
+        System.out.println(c1 == c2);   // true
     }
 }
