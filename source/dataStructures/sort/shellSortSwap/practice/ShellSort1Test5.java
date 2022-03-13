@@ -7,7 +7,7 @@ import java.util.Arrays;
  * @author: Feirouz
  * @date: 2022-02-20 13:49
  */
-public class ShellSortTest5 {
+public class ShellSort1Test5 {
     public static void main(String[] args) {
         int[] arr = {6,8,1,2,3,-4,8,-9,5,10};
         sort(arr);

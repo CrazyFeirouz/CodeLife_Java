@@ -89,4 +89,21 @@ public class EmpLinkedList {
             curEmp = curEmp.next;
         }
     }
+
+    // 按顺序添加
+    public void addByOrder(Emp emp) {
+        // 临时值
+        Emp curEmp = head;
+        // 放在头位置 或者 插在头前面
+        if (head == null || emp.id < curEmp.id) {
+            emp.next = curEmp;
+            head = emp;
+        } else {    // 插在头后
+            while (curEmp.next != null && curEmp.next.id < emp.id) {
+                curEmp = curEmp.next;
+            }
+            emp.next = curEmp.next;
+            curEmp.next = emp;
+        }
+    }
 }

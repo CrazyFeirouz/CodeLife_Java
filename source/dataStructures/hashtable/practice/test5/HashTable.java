@@ -64,6 +64,15 @@ public class HashTable {
         int curIndex = hashFun(emp.id);
         empLinkedLists[curIndex].editEmp(emp);
     }
+
+    // 按顺序添加雇员
+    public void addByOrder(Emp emp) {
+        // 根据员工的id，
+        int curIndex = hashFun(emp.id);
+        empLinkedLists[curIndex].addByOrder(emp);
+    }
+
+
     // 编写散列函数，使用一个简单取模法
     public int hashFun(int id) {
         return id % size;
