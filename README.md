@@ -285,6 +285,13 @@
 >   + HuffmanTree ： *赫夫曼树*
 >   </details>
 
+>   <details>
+>   <summary><b>10. 哈夫曼编码（huffmancode）</b></summary>
+>
+>   + HuffmanCode ： *赫夫曼编码*
+>   + Node ： *赫夫曼编码的节点*
+>   </details>
+
 </details>
 
 ***
