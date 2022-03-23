@@ -27,19 +27,18 @@ public class HuffmanCode {
         System.out.println(codes);
 
         // 将赫夫曼编码(十进制表示二进制版)转成bute[]
-//        byte[] huffmanCodeBytes = zip(contentByte, huffmanCodes);
-//        System.out.println(Arrays.toString(huffmanCodeBytes));
-//        System.out.println(huffmanCodeBytes.length);
+        byte[] huffmanCodeBytes = zip(contentByte, huffmanCodes);
+        System.out.println(Arrays.toString(huffmanCodeBytes));
+        System.out.println(huffmanCodeBytes.length);
 
-        // 测试
-        String str = "10000000";
-        Integer integer = Integer.parseInt(str);
-        System.out.println(integer);
-        int intNum = integer;
-        System.out.println(intNum);
-
-        System.out.println((byte)intNum);
-        System.out.println(Byte.parseByte(str));
+        // 测试 - 关于 byte 与 str/int 的转换
+//        String str = "10000000";
+//        Integer integer = Integer.parseInt(str);
+//        System.out.println(integer);
+//        int intNum = integer;
+//        System.out.println(intNum);
+//        System.out.println((byte)intNum);
+//        System.out.println(Byte.parseByte(str));
 
     }
 
