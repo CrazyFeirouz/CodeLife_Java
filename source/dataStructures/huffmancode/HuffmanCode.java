@@ -20,9 +20,60 @@ public class HuffmanCode {
 
         // 创建赫夫曼树
         Node huffmanTree = createHuffmanTree(nodelist);
-        huffmanTree.preorder();
+//        huffmanTree.preorder();
+
+        // 测试生成的赫夫曼编码
+        Map<Byte, String> codes = getCodes(huffmanTree);
+        System.out.println(codes);
 
     }
+
+    // 为了调用方便, 我们重载 getCodes
+    private static Map<Byte, String> getCodes(Node root) {
+        if (root == null) {
+            return null;
+        }
+        // 处理root左子树
+        getCodes(root.left, "0", new StringBuilder());
+        // 处理root右子树
+        getCodes(root.right, "1", new StringBuilder());
+        return huffmanCodes;
+    }
+
+    // 生成赫夫曼树对应的赫夫曼编码
+    // 思路:
+    // 1. 将赫夫曼编码表存放在Map<Byte, String>
+    //  如 32->01 97->100 ...
+    static Map<Byte, String> huffmanCodes = new HashMap<>();
+
+    /**
+     * 功能: 将传入的node节点, 并且同时获得对应node节点的编码, 放入到huffmanCode集合返回
+     * @param node 节点
+     * @param code 路径: 左子节点-0 右子节点-1
+     * @param stringBuilder 用于拼接路径
+     */
+    private static void getCodes(Node node, String code, StringBuilder stringBuilder) {
+        StringBuilder stringBuilder2 = new StringBuilder(stringBuilder);
+        // 将code加入到stringBuilder2
+        stringBuilder2.append(code);
+        if (node != null) { // 如果node == null - 不处理
+            // 判断当前弄得是叶子节点还是非叶子节点
+            if (node.data == null) {    // 非叶子节点
+                // 递归处理
+                // 向左递归
+                getCodes(node.left, "0", stringBuilder2);
+                // 向右递归
+                getCodes(node.right, "1", stringBuilder2);
+            } else {        // 说明是一个叶子节点
+                // 就表示找到某个叶子叶子节点的最后
+                huffmanCodes.put(node.data, stringBuilder2.toString());
+            }
+        }
+    }
+
+
+
+    // ===========================分割===============================
 
     /**
      * 将字节数组对应的 key-value 统计出来放置在 arraylist 中
