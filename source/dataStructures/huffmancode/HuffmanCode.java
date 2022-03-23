@@ -12,24 +12,7 @@ public class HuffmanCode {
     public static void main(String[] args) {
         String content = "i like like like java do you like a java";
         byte[] contentByte = content.getBytes(StandardCharsets.UTF_8);
-        System.out.println(contentByte.length);     // 40
-
-        // 将字节数组对应的 key-value 统计出来放置在 arraylist 中
-        List<Node> nodelist = getNodes(contentByte);
-        System.out.println(nodelist);
-
-        // 创建赫夫曼树
-        Node huffmanTree = createHuffmanTree(nodelist);
-//        huffmanTree.preorder();
-
-        // 测试生成的赫夫曼编码
-        Map<Byte, String> codes = getCodes(huffmanTree);
-        System.out.println(codes);
-
-        // 将赫夫曼编码(十进制表示二进制版)转成bute[]
-        byte[] huffmanCodeBytes = zip(contentByte, huffmanCodes);
-        System.out.println(Arrays.toString(huffmanCodeBytes));
-        System.out.println(huffmanCodeBytes.length);
+//        System.out.println(contentByte.length);     // 40
 
         // 测试 - 关于 byte 与 str/int 的转换
 //        String str = "10000000";
@@ -40,7 +23,30 @@ public class HuffmanCode {
 //        System.out.println((byte)intNum);
 //        System.out.println(Byte.parseByte(str));
 
+        byte[] bytes = huffmanZip(contentByte);
+        System.out.println(Arrays.toString(bytes));
+
     }
+
+    /**
+     * 使用一个方法, 将前面的方法封装起来, 便于我们的调用
+     * @param bytes 原始的字符串对应的字节数组
+     * @return 经过 赫夫曼编码处理后的字节数组(压缩后的数组)
+     */
+    private static byte[] huffmanZip(byte[] bytes) {
+        // 将字节数组对应的 key-value 统计出来放置在 arraylist 中
+        List<Node> nodelist = getNodes(bytes);
+        // 根据 nodelist 创建赫夫曼树
+        Node huffmanTree = createHuffmanTree(nodelist);
+        // 根据对应的赫夫曼树 获取 对应的编码
+        Map<Byte, String> codes = getCodes(huffmanTree);
+        // 将赫夫曼编码(十进制表示二进制版)转成bute[], 根据生成的赫夫曼编码, 压缩得到压缩后的赫夫曼编码字节数组
+        byte[] huffmanCodeBytes = zip(bytes, codes);
+
+        return huffmanCodeBytes;
+    }
+
+    // ===========================分割===============================
 
     /**
      * 编写一个方法, 将字符串对应byte[] 数组, 通过生成得赫夫曼编码表, 返回一个赫夫曼编码 压缩后得bute[]
@@ -76,7 +82,7 @@ public class HuffmanCode {
 
              // 将 strByte 转成一个byte, 放到huffmanCodeBytes种
 //            huffmanCodeBytes[index] = Byte.parseByte(curStr);     // 该种方法会把 你的str数值 完完全全保存成 对应的byte大小数值
-            huffmanCodeBytes[index] = (byte) Integer.parseInt(curStr);      // 所以我们需要先把 str 改成 int, 再改成 byte
+            huffmanCodeBytes[index] = (byte) Integer.parseInt(curStr, 2);      // 所以我们需要先把 str 改成 int, 再改成 byte
 
             index++;
         }
