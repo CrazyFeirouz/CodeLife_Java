@@ -26,7 +26,65 @@ public class HuffmanCode {
         Map<Byte, String> codes = getCodes(huffmanTree);
         System.out.println(codes);
 
+        // 将赫夫曼编码(十进制表示二进制版)转成bute[]
+//        byte[] huffmanCodeBytes = zip(contentByte, huffmanCodes);
+//        System.out.println(Arrays.toString(huffmanCodeBytes));
+//        System.out.println(huffmanCodeBytes.length);
+
+        // 测试
+        String str = "10000000";
+        Integer integer = Integer.parseInt(str);
+        System.out.println(integer);
+        int intNum = integer;
+        System.out.println(intNum);
+
+        System.out.println((byte)intNum);
+        System.out.println(Byte.parseByte(str));
+
     }
+
+    /**
+     * 编写一个方法, 将字符串对应byte[] 数组, 通过生成得赫夫曼编码表, 返回一个赫夫曼编码 压缩后得bute[]
+     * @param bytes 这时原始得字符串对应得bute[]
+     * @param huffmanCodes 生成得赫夫曼编码map
+     * @return 返回赫夫曼编码处理后的 byte[]
+     * 将字符串 "i like..." => "10101..."
+     *      每8位二进制对应一位byte -- "10101000(补码)" => "11011000" => -88
+     */
+    private static byte[] zip(byte[] bytes, Map<Byte, String> huffmanCodes) {
+        // 1. 利用 huffmanCodes 将 bytes 转成 赫夫曼编码对应的字符串
+        StringBuilder stringBuilder = new StringBuilder();
+        // 遍历 bytes 数组
+        for (byte aByte : bytes) {
+            stringBuilder.append(huffmanCodes.get(aByte));
+        }
+
+        // 将 "10101000..." 转成byte[]
+
+        // 统计返回 byte[] huffmanCodeBytes 长度
+        int len = (stringBuilder.length() + 7) / 8;
+
+        // 创建 huffmanCodeBytes
+        byte[] huffmanCodeBytes = new byte[len];
+        int index = 0;
+        for (int i = 0; i < stringBuilder.length(); i += 8) {
+            String curStr;
+            if (i + 8 > stringBuilder.length()) {       // 不够 8 位
+                curStr = stringBuilder.substring(i);
+            } else {                                    // 正好 8 位
+                curStr = stringBuilder.substring(i, i + 8);
+            }
+
+             // 将 strByte 转成一个byte, 放到huffmanCodeBytes种
+//            huffmanCodeBytes[index] = Byte.parseByte(curStr);     // 该种方法会把 你的str数值 完完全全保存成 对应的byte大小数值
+            huffmanCodeBytes[index] = (byte) Integer.parseInt(curStr);      // 所以我们需要先把 str 改成 int, 再改成 byte
+
+            index++;
+        }
+        return huffmanCodeBytes;
+    }
+
+    // ===========================分割===============================
 
     // 为了调用方便, 我们重载 getCodes
     private static Map<Byte, String> getCodes(Node root) {
@@ -45,6 +103,8 @@ public class HuffmanCode {
     // 1. 将赫夫曼编码表存放在Map<Byte, String>
     //  如 32->01 97->100 ...
     static Map<Byte, String> huffmanCodes = new HashMap<>();
+    // 2. 在生成赫夫曼编码表示, 需要去拼接路径, 定义一个StringBuilder 存放某个叶子节点的路径
+//    static StringBuilder stringBuilder = new StringBuilder();
 
     /**
      * 功能: 将传入的node节点, 并且同时获得对应node节点的编码, 放入到huffmanCode集合返回
