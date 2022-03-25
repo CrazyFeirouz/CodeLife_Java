@@ -10,7 +10,9 @@ import java.util.*;
  */
 public class HuffmanCode {
     public static void main(String[] args) {
-        String content = "i like like like java do you like a java";
+//        String content = "i like like like java do you like a java";
+        String content = "hello world";
+//        String content = "hello word";
         byte[] contentByte = content.getBytes(StandardCharsets.UTF_8);
 //        System.out.println(contentByte.length);     // 40
 
@@ -26,7 +28,99 @@ public class HuffmanCode {
         byte[] bytes = huffmanZip(contentByte);
         System.out.println(Arrays.toString(bytes));
 
+        System.out.println(byteToBitString(true, (byte) 0));
+
+        byte[] decodeByte = decode(huffmanCodes, bytes);
+        System.out.println("转换 " + Arrays.toString(decodeByte));
+        System.out.println(new String(decodeByte));
+
     }
+
+    // 完成数据的解压
+    // 思路
+    // 1. 将huffmanCodeBytes [-88, -65, -56...] 重新先转成 赫夫曼编码对应的二进制字符串 "10101000..."
+    // 2. 赫夫曼编码对应的二进制的字符串 "1010100..." => 对照 赫夫曼编码 => "i like like..."
+
+    /**
+     * 编写一个方法, 完成对压缩数据的解码
+     * @param huffmanCodes 赫夫曼编码表map
+     * @param huffmanBytes 和魔法编码得到的字节数组
+     * @return 原来字符串对应的数组
+     */
+    public static byte[] decode(Map<Byte, String> huffmanCodes, byte[] huffmanBytes) {
+        // 1. 先得到 huffmanBytes 对应的二进制的字符串, 形式 10101000...
+        StringBuilder stringBuilder = new StringBuilder();
+        // 将 byte数组 转成 二进制的字符串
+        for (int i = 0; i < huffmanBytes.length; i++) {
+            byte b = huffmanBytes[i];
+            // 判断是不是最后一个字节
+            boolean flag = (i == huffmanBytes.length - 1);
+            stringBuilder.append(byteToBitString(flag, b));
+        }
+
+        System.out.println(stringBuilder.toString());
+
+        // 将map反过来
+        HashMap<String, Byte> huffmanDeCodes = new HashMap<>();
+        for(Map.Entry<Byte, String> entry : huffmanCodes.entrySet()) {
+            huffmanDeCodes.put(entry.getValue(), entry.getKey());
+        }
+        // 创建集合, 存放byte
+        List<Byte> list = new ArrayList<>();
+        // i 理解为 索引, 扫描 stringBuilder
+        int i = 0;
+        String temp = "";
+        while (i < stringBuilder.length()) {
+            // Map - ' '->01 'a'->100 ...
+            while (i < stringBuilder.length() && !huffmanCodes.containsValue(temp)) {
+                temp = temp + String.valueOf(stringBuilder.charAt(i));
+                i++;
+            }
+            if (huffmanDeCodes.get(temp) != null) {
+                list.add(Byte.valueOf(huffmanDeCodes.get(temp)));
+            }
+            temp = "";
+        }
+
+        // 将list转为byte[]
+        byte[] bytes = new byte[list.size()];
+        for (int j = 0; j < bytes.length; j++) {
+            bytes[j] = list.get(j);
+        }
+
+        return bytes;
+    }
+
+    /**
+     * 将一个byte转成一个二进制的字符串
+     * @param flag 标志着是是最后一位. true->是, false->否. 如果是最后一个字节, 无需补高位
+     * @param b 传入的 byte
+     * @return 该b 对应的二进制的字符串 (按补码返回)
+     */
+    public static String byteToBitString(boolean flag, byte b) {
+        // 使用变量保存b
+        int temp = b;           // 将b转成int - 这里的 int 是32位的, 若是负数, 请自行将其缩短至8位
+
+        if (!flag) {            // 非最后一位
+            // 如果是正数我们还存在补高位 (负数就算运算也不会受影响)
+            temp |= 256;        // 按位或 256=>1 0000 0000 | 0000 0001 => 1 0000 0001
+        } else {                // 最后一位,我们只取后8位部分
+            temp &= 255;        // 按位与 255=>  1111 1111 & ... 0000 0001 => 0000 0001
+        }
+        // 将byte值 转成 二进制的str字符串
+        String str = Integer.toBinaryString(temp);      // str为temp对应的二进制的"补码"
+
+        if (!flag) {            // 不管正数还是负数, 通通截取后8位
+            return str.substring(str.length() - 8);
+        } else {                // 最后一位没补, 所以直接过去
+            for (int i = 0; i < endCodeZeroStartCount; i++) {
+                str = "0" + str;
+            }
+            return str;
+        }
+    }
+
+    // ===========================分割===============================
 
     /**
      * 使用一个方法, 将前面的方法封装起来, 便于我们的调用
@@ -48,6 +142,8 @@ public class HuffmanCode {
 
     // ===========================分割===============================
 
+    private static int endCodeZeroStartCount = 0;  // 结尾字符前面的零个数
+
     /**
      * 编写一个方法, 将字符串对应byte[] 数组, 通过生成得赫夫曼编码表, 返回一个赫夫曼编码 压缩后得bute[]
      * @param bytes 这时原始得字符串对应得bute[]
@@ -64,6 +160,8 @@ public class HuffmanCode {
             stringBuilder.append(huffmanCodes.get(aByte));
         }
 
+        System.out.println(stringBuilder.toString());
+
         // 将 "10101000..." 转成byte[]
 
         // 统计返回 byte[] huffmanCodeBytes 长度
@@ -75,6 +173,13 @@ public class HuffmanCode {
         for (int i = 0; i < stringBuilder.length(); i += 8) {
             String curStr;
             if (i + 8 > stringBuilder.length()) {       // 不够 8 位
+                for (int j = i; j < stringBuilder.length(); j++) {
+                    if (stringBuilder.charAt(j) == '0') {
+                        endCodeZeroStartCount++;
+                    } else {
+                        break;
+                    }
+                }
                 curStr = stringBuilder.substring(i);
             } else {                                    // 正好 8 位
                 curStr = stringBuilder.substring(i, i + 8);
