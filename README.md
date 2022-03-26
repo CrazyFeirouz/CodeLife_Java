@@ -283,6 +283,7 @@
 >   + BinaryTree ： *二叉树*
 >   + ThreadBinaryTree ： *线索化二叉树*
 >   + HuffmanTree ： *赫夫曼树*
+>   + binarySortTree ： *二叉排序树*
 >   </details>
 
 >   <details>
@@ -291,6 +292,7 @@
 >   + HuffmanCode ： *赫夫曼编码*
 >   + Node ： *赫夫曼编码的节点*
 >   + FileZip ： *使用哈夫曼编码的方式压缩/解压文件*
+>   
 >   </details>
 
 </details>
