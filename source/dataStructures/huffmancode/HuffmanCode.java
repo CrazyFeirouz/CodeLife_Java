@@ -10,9 +10,10 @@ import java.util.*;
  */
 public class HuffmanCode {
     public static void main(String[] args) {
-//        String content = "i like like like java do you like a java";
-        String content = "hello world";
+        String content = "i like like like java do you like a java";
+//        String content = "hello world";
 //        String content = "hello word";
+//        String content = "i like like like java do you like a java a/a!z   a";
         byte[] contentByte = content.getBytes(StandardCharsets.UTF_8);
 //        System.out.println(contentByte.length);     // 40
 

@@ -1,9 +1,9 @@
 package dataStructures.huffmancode;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import org.junit.Test;
+
+import java.io.*;
+import java.util.Map;
 
 /**
  * @description: 使用赫夫曼编码对文件压缩
@@ -12,12 +12,62 @@ import java.io.ObjectOutputStream;
  */
 public class FileZip {
     public static void main(String[] args) {
+
+    }
+
+    @Test
+    public void zip() {
         // 测试压缩文件
         String srcFile = "source/dataStructures/huffmancode/files/fei.bmp";
         String dstFile = "source/dataStructures/huffmancode/files/fei.zip";
         zipFile(srcFile, dstFile);
         System.out.println("===压缩完成===");
+    }
 
+    @Test
+    public void unzip() {
+        // 测试解压文件
+        String zipFile = "source/dataStructures/huffmancode/files/fei.zip";
+        String dstFile = "source/dataStructures/huffmancode/files/fei2.bmp";
+        unZipFile(zipFile, dstFile);
+        System.out.println("===解压完成===");
+    }
+
+    /**
+     * 完成对压缩文件的解压
+     * @param zipFile 准备解压的文件
+     * @param dstFile 将文件解压到哪个路径
+     */
+    public static void unZipFile(String zipFile, String dstFile) {
+        // 定义文件输入流
+        FileInputStream is = null;
+        // 定义一个对象输入流
+        ObjectInputStream ois = null;
+        // 定义文件的输出流
+        FileOutputStream os = null;
+        try {
+            is = new FileInputStream(zipFile);
+            ois = new ObjectInputStream(is);
+            // 读取byte数组, huffmanBytes
+            byte[] huffmanBytes = (byte[]) ois.readObject();
+            // 读取赫夫曼编码表
+            Map<Byte, String> huffmanCodes = (Map<Byte, String>)ois.readObject();
+            // 解码
+            byte[] decodeBytes = HuffmanCode.decode(huffmanCodes, huffmanBytes);
+            os = new FileOutputStream(dstFile);
+            os.write(decodeBytes);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                os.close();
+                is.close();
+                ois.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
     }
 
     /**
