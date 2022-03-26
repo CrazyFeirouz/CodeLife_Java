@@ -58,8 +58,6 @@ public class HuffmanCode {
             stringBuilder.append(byteToBitString(flag, b));
         }
 
-        System.out.println(stringBuilder.toString());
-
         // 将map反过来
         HashMap<String, Byte> huffmanDeCodes = new HashMap<>();
         for(Map.Entry<Byte, String> entry : huffmanCodes.entrySet()) {
@@ -127,7 +125,7 @@ public class HuffmanCode {
      * @param bytes 原始的字符串对应的字节数组
      * @return 经过 赫夫曼编码处理后的字节数组(压缩后的数组)
      */
-    private static byte[] huffmanZip(byte[] bytes) {
+    public static byte[] huffmanZip(byte[] bytes) {
         // 将字节数组对应的 key-value 统计出来放置在 arraylist 中
         List<Node> nodelist = getNodes(bytes);
         // 根据 nodelist 创建赫夫曼树
@@ -159,8 +157,6 @@ public class HuffmanCode {
         for (byte aByte : bytes) {
             stringBuilder.append(huffmanCodes.get(aByte));
         }
-
-        System.out.println(stringBuilder.toString());
 
         // 将 "10101000..." 转成byte[]
 
@@ -212,7 +208,11 @@ public class HuffmanCode {
     // 思路:
     // 1. 将赫夫曼编码表存放在Map<Byte, String>
     //  如 32->01 97->100 ...
-    static Map<Byte, String> huffmanCodes = new HashMap<>();
+    public static Map<Byte, String> huffmanCodes = new HashMap<>();
+    // 创一个获取该属性的方法, 方便后序调用
+    public static Map<Byte, String> getHuffmanCodes() {
+        return huffmanCodes;
+    }
     // 2. 在生成赫夫曼编码表示, 需要去拼接路径, 定义一个StringBuilder 存放某个叶子节点的路径
 //    static StringBuilder stringBuilder = new StringBuilder();
 

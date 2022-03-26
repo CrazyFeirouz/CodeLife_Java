@@ -290,6 +290,7 @@
 >
 >   + HuffmanCode ： *赫夫曼编码*
 >   + Node ： *赫夫曼编码的节点*
+>   + FileZip ： *使用哈夫曼编码的方式压缩/解压文件*
 >   </details>
 
 </details>
