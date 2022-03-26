@@ -52,8 +52,10 @@ public class FileZip {
             byte[] huffmanBytes = (byte[]) ois.readObject();
             // 读取赫夫曼编码表
             Map<Byte, String> huffmanCodes = (Map<Byte, String>)ois.readObject();
+            // 读取末尾数0个数
+            Integer endCodeZeroCount = (Integer) ois.readObject();
             // 解码
-            byte[] decodeBytes = HuffmanCode.decode(huffmanCodes, huffmanBytes);
+            byte[] decodeBytes = HuffmanCode.decode(huffmanCodes, huffmanBytes, endCodeZeroCount);
             os = new FileOutputStream(dstFile);
             os.write(decodeBytes);
         } catch (Exception e) {
@@ -103,6 +105,8 @@ public class FileZip {
             // 注意我们以 对象六的方式写入 赫夫曼编码, 是为了以后我们恢复源文件
             // 注意一定要把赫夫曼编码写入压缩文件
             oos.writeObject(HuffmanCode.getHuffmanCodes());
+            // 优化后, 我们还有个记录末尾数0的个数的值, 记得带上
+            oos.writeObject(HuffmanCode.getEndCodeZeroStartCount());
 
         } catch (Exception e) {
             e.printStackTrace();

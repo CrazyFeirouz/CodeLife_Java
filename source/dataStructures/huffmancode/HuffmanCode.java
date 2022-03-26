@@ -29,9 +29,9 @@ public class HuffmanCode {
         byte[] bytes = huffmanZip(contentByte);
         System.out.println(Arrays.toString(bytes));
 
-        System.out.println(byteToBitString(true, (byte) 0));
+        System.out.println(byteToBitString(true, (byte) 0, endCodeZeroStartCount));
 
-        byte[] decodeByte = decode(huffmanCodes, bytes);
+        byte[] decodeByte = decode(huffmanCodes, bytes, endCodeZeroStartCount);
         System.out.println("转换 " + Arrays.toString(decodeByte));
         System.out.println(new String(decodeByte));
 
@@ -48,7 +48,7 @@ public class HuffmanCode {
      * @param huffmanBytes 和魔法编码得到的字节数组
      * @return 原来字符串对应的数组
      */
-    public static byte[] decode(Map<Byte, String> huffmanCodes, byte[] huffmanBytes) {
+    public static byte[] decode(Map<Byte, String> huffmanCodes, byte[] huffmanBytes, int endCodeZeroStartCount) {
         // 1. 先得到 huffmanBytes 对应的二进制的字符串, 形式 10101000...
         StringBuilder stringBuilder = new StringBuilder();
         // 将 byte数组 转成 二进制的字符串
@@ -56,7 +56,7 @@ public class HuffmanCode {
             byte b = huffmanBytes[i];
             // 判断是不是最后一个字节
             boolean flag = (i == huffmanBytes.length - 1);
-            stringBuilder.append(byteToBitString(flag, b));
+            stringBuilder.append(byteToBitString(flag, b, endCodeZeroStartCount));
         }
 
         // 将map反过来
@@ -96,7 +96,7 @@ public class HuffmanCode {
      * @param b 传入的 byte
      * @return 该b 对应的二进制的字符串 (按补码返回)
      */
-    public static String byteToBitString(boolean flag, byte b) {
+    public static String byteToBitString(boolean flag, byte b, int endCodeZeroStartCount) {
         // 使用变量保存b
         int temp = b;           // 将b转成int - 这里的 int 是32位的, 若是负数, 请自行将其缩短至8位
 
@@ -142,6 +142,10 @@ public class HuffmanCode {
     // ===========================分割===============================
 
     private static int endCodeZeroStartCount = 0;  // 结尾字符前面的零个数
+
+    public static int getEndCodeZeroStartCount() {
+        return endCodeZeroStartCount;
+    }
 
     /**
      * 编写一个方法, 将字符串对应byte[] 数组, 通过生成得赫夫曼编码表, 返回一个赫夫曼编码 压缩后得bute[]
