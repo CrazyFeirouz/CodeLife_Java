@@ -7,7 +7,7 @@ package dataStructures.tree.binarySortTree;
  */
 public class BinarySortTreeDemo {
     public static void main(String[] args) {
-        int[] arr = {7, 3, 10, 12, 5, 1, 9};
+        int[] arr = {7, 3, 10, 12, 5, 1, 9, 2};
         BinarySortTree binarySortTree = new BinarySortTree();
         // 循环的添加节点到二叉排序树
         for (int i = 0; i < arr.length; i++) {
@@ -16,6 +16,11 @@ public class BinarySortTreeDemo {
         }
 
         // 中序遍历二叉排序树
+        binarySortTree.inorder();
+
+        System.out.println("\n----删除----");
+        binarySortTree.delNode(1);
+
         binarySortTree.inorder();
     }
 }
