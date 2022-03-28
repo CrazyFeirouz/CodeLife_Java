@@ -64,6 +64,12 @@ public class HashTable {
         empLinkedLists[index].addEmpByOrder(emp);
     }
 
+    // 删除雇员
+    public void delEmp(int id) {
+        int index = hashFun(id);
+        empLinkedLists[index].delEmp(id);
+    }
+
     // 编写散列函数，使用一个简单取模法
     public int hashFun(int id) {
         return id % size;

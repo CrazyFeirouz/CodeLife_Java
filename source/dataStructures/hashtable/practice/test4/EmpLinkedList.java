@@ -96,8 +96,23 @@ public class EmpLinkedList {
                 emp.next = curEmp.next;
                 curEmp.next = emp;
             }
-
         }
+    }
 
+    // 删除雇员
+    public void delEmp(int id) {
+        if (head == null) {
+            return;
+        }
+        // 删除雇员
+        Emp curEmp = head;
+        if (curEmp.id == id) {
+            head = curEmp.next;
+        } else{
+            while (curEmp.next != null && curEmp.next.id != id) {
+                curEmp = curEmp.next;
+            }
+            curEmp.next = curEmp.next.next;
+        }
     }
 }
