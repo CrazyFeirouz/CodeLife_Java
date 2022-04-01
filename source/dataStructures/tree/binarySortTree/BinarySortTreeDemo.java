@@ -19,7 +19,7 @@ public class BinarySortTreeDemo {
         binarySortTree.inorder();
 
         System.out.println("\n----删除----");
-        binarySortTree.delNode(1);
+        binarySortTree.delNode(10);
 
         binarySortTree.inorder();
     }

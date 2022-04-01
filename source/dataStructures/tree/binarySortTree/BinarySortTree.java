@@ -39,7 +39,8 @@ public class BinarySortTree {
                 }
             // 情况三: targetNode 有左右子节点
             } else if (targetNode.left != null && targetNode.right != null) {
-
+                int minVal = delRightTreeMin(targetNode.right);
+                targetNode.value = minVal;
             // 情况二: targeNode 有一条子节点
             } else {
                 // 如果要删除的 节点 是 左子节点
@@ -60,6 +61,21 @@ public class BinarySortTree {
                 }
             }
         }
+    }
+
+    // 编写
+    // 1. 返回的 以node 为根节点的二叉排序树的最小节点的值
+    // 2. 删除node 为根节点的 二叉排序树的最小节点
+    public int delRightTreeMin(Node node) {
+        Node target = node;
+        // 循环的查找左子节点, 就会找到最小值
+        while (target.left != null) {
+            target = target.left;
+        }
+        // 这时target到达最小节点
+        // 删除最小节点
+        delNode(target.value);
+        return target.value;
     }
 
     /**
