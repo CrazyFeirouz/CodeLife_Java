@@ -16,10 +16,24 @@ public class BinarySortTreeDemo {
         }
 
         // 中序遍历二叉排序树
-        binarySortTree.inorder();
+//        binarySortTree.inorder();
+//
+//        System.out.println("\n----删除----");
+//        binarySortTree.delNode(10);
+//
+//        binarySortTree.inorder();
 
-        System.out.println("\n----删除----");
+        // 测试以下删除叶子节点
+        binarySortTree.delNode(2);
+        binarySortTree.delNode(5);
+        binarySortTree.delNode(9);
+        binarySortTree.delNode(12);
+        binarySortTree.delNode(7);
+        binarySortTree.delNode(3);
         binarySortTree.delNode(10);
+        binarySortTree.delNode(1);
+
+//        System.out.println("Root = " + binarySortTree.getRoot().value);
 
         binarySortTree.inorder();
     }

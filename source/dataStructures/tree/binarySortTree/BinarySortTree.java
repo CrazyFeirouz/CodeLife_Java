@@ -8,6 +8,10 @@ package dataStructures.tree.binarySortTree;
 public class BinarySortTree {
     private Node root;
 
+    public Node getRoot() {
+        return root;
+    }
+
     /**
      * 删除节点
      * @param value 要删除的节点值
@@ -43,20 +47,29 @@ public class BinarySortTree {
                 targetNode.value = minVal;
             // 情况二: targeNode 有一条子节点
             } else {
-                // 如果要删除的 节点 是 左子节点
-                if (targetNode.left != null) {
-                    // 如果 targetNode 是 parent 的左子节点
-                    if (parent.left.value == value) {
-                        parent.left = targetNode.left;
-                    } else {
-                        parent.right = targetNode.left;
+                // 如果是根节点
+                if (parent == null) {
+                    if (targetNode.left != null) {      // 如果要删除的 节点 只有 左子节点
+                        root = targetNode.left;
+                    } else {                            // 如果要删除的 节点 只有 右子节点
+                        root = targetNode.right;
                     }
-                } else {    // 如果要删除 的 节点 只有 右子节点
-                    // 如果 targetNode 是 parent 的左子节点
-                    if (parent.left.value == value) {
-                        parent.left = targetNode.right;
-                    } else {
-                        parent.right = targetNode.right;
+                }else {
+                    // 如果要删除的 节点 只有 左子节点
+                    if (targetNode.left != null) {
+                        // 如果 targetNode 是 parent 的左子节点
+                        if (parent.left.value == value) {
+                            parent.left = targetNode.left;
+                        } else {
+                            parent.right = targetNode.left;
+                        }
+                    } else {    // 如果要删除 的 节点 只有 右子节点
+                        // 如果 targetNode 是 parent 的左子节点
+                        if (parent.left.value == value) {
+                            parent.left = targetNode.right;
+                        } else {
+                            parent.right = targetNode.right;
+                        }
                     }
                 }
             }
@@ -66,6 +79,12 @@ public class BinarySortTree {
     // 编写
     // 1. 返回的 以node 为根节点的二叉排序树的最小节点的值
     // 2. 删除node 为根节点的 二叉排序树的最小节点
+
+    /**
+     * 删除子树中最小的节点值并返回
+     * @param node
+     * @return
+     */
     public int delRightTreeMin(Node node) {
         Node target = node;
         // 循环的查找左子节点, 就会找到最小值
