@@ -74,6 +74,16 @@ public class EmpLinkedList {
             emp.next = curEmp.next;
             curEmp.next = emp;
         }
+    }
 
+    // 修改雇员
+    public void editByEmp(Emp emp) {
+        Emp curEmp = head;
+        while (curEmp != null && curEmp.id <= emp.id) {
+            if (curEmp.id == emp.id) {
+                curEmp.name = emp.name;
+            }
+            curEmp = curEmp.next;
+        }
     }
 }

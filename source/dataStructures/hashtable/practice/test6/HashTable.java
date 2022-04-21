@@ -58,7 +58,12 @@ public class HashTable {
         }else {
             System.out.println("已找到：" + empById);
         }
+    }
 
+    // 修改雇员
+    public void edit(Emp emp) {
+        int index = hashFun(emp.id);
+        empLinkedLists[index].editByEmp(emp);
     }
 
     // 编写散列函数，使用一个简单取模法

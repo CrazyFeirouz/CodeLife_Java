@@ -23,6 +23,7 @@ public class HashTableDemo {
             System.out.println("add: 添加雇员");
             System.out.println("list: 显示雇员");
             System.out.println("find: 查找雇员");
+            System.out.println("edit: 修改雇员");
             System.out.println("exit: 退出系统");
             System.out.print("请输入你的操作：");
             key = scanner.next();
@@ -42,6 +43,14 @@ public class HashTableDemo {
                     System.out.print("输入用户id：");
                     int findId = scanner.nextInt();
                     hashTable.find(findId);
+                    break;
+                case "edit":
+                    System.out.print("输入用户id：");
+                    int editId = scanner.nextInt();
+                    System.out.print("输入用户名称：");
+                    String editName = scanner.next();
+                    Emp editEmp = new Emp(editId, editName);
+                    hashTable.edit(editEmp);
                     break;
                 case "exit":
                     scanner.close();
