@@ -3,7 +3,7 @@ package dataStructures.sort.mergeSort.practice;
 import java.util.Arrays;
 
 /**
- * @description:
+ * @description: 测验13 - 归并排序
  * @author: Feirouz
  * @date: 2022-05-23 6:18
  */
