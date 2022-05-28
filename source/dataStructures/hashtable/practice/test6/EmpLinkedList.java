@@ -86,4 +86,20 @@ public class EmpLinkedList {
             curEmp = curEmp.next;
         }
     }
+
+    // 删除雇员
+    public void removeById(int id) {
+        Emp curEmp = head;
+        if (curEmp.id == id) {
+            head = curEmp.next;
+        } else {
+            while (curEmp.next != null) {
+                if (curEmp.next.id == id) {
+                    curEmp.next = curEmp.next.next;
+                    break;
+                }
+                curEmp = curEmp.next;
+            }
+        }
+    }
 }
