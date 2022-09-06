@@ -310,6 +310,15 @@
 >   + 关于栈的架构测试（StackStuTest）
 >   </details>
 
+>   <details>
+>   <summary><b>2. 第二章（chapter02）</b></summary>
+>
+>   + 类的加载过程一（HelloLoader）
+>   + 类的加载过程三:初始化的顺序（ClassInitTest）
+>   + 类的加载过程三:类的构造器-对应<init>（ClinitTest）
+>   + 类的加载过程三:初始化时<clinit>在子父类中的顺序（ClinitTest1）
+> 
+>   </details>
 </details>
 
 ***
