@@ -48,7 +48,7 @@ public class ClassInitTest {
  */
 
 /**
- * <clinit>方法
+ * <clinit>方法 - 类的加载过程中的第三阶段 - 初始化
  *  0 iconst_1
  *  1 putstatic #3 <jvm/chapter02/ex1/ClassInitTest.num>
  *  4 iconst_2
