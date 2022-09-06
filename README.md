@@ -317,6 +317,7 @@
 >   + 类的加载过程三:初始化的顺序（ClassInitTest）
 >   + 类的加载过程三:类的构造器-对应<init>（ClinitTest）
 >   + 类的加载过程三:初始化时<clinit>在子父类中的顺序（ClinitTest1）
+>   + 类的加载过程三:初始化时<clinit>次数（DeadTheadTest）
 > 
 >   </details>
 </details>
