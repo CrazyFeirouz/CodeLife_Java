@@ -2,7 +2,6 @@ package jvm.chapter02.ex2;
 
 import sun.misc.Launcher;
 import sun.security.ec.ECOperations;
-import sun.security.util.CurveDB;
 
 import java.net.URL;
 import java.security.Provider;
