@@ -128,6 +128,7 @@
 >   + ThreadTest2 ： *多线程的创建 方式一：继承于Thread类 使用匿名子类的方式*
 >   + ThreadTest3 ： *多线程的创建 方式二：实现Runnable接口*
 >   + ProAndCost ： *线程通信的应用：经典例题：生产者/消费者*
+>   + demo01 ： *狂神_线程创建方式一：继承于Thread类 及 下载图片例子*
 >   
 >   </details>
 
