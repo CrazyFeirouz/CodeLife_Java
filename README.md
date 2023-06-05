@@ -129,6 +129,7 @@
 >   + ThreadTest3 ： *多线程的创建 方式二：实现Runnable接口*
 >   + ProAndCost ： *线程通信的应用：经典例题：生产者/消费者*
 >   + demo01 ： *狂神_线程创建方式*
+>   + state ： *狂神_线程状态*
 >   
 >   </details>
 
