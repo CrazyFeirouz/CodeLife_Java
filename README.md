@@ -129,7 +129,6 @@
 >   + ThreadTest3 ： *多线程的创建 方式二：实现Runnable接口*
 >   + ProAndCost ： *线程通信的应用：经典例题：生产者/消费者*
 >   + demo01 ： *狂神_线程创建方式*
->   + demo02 ： *狂神_线程创建方式补充*
 >   
 >   </details>
 
@@ -177,6 +176,13 @@
 >
 >   </details>
 
+>   <details>
+>   <summary><b>13. Java Lambda（lambda）</b></summary>
+>
+>   + demo03 ：*狂神_Lambda讲解*
+>
+>   </details>
+
 </details>
 
 ***
@@ -192,6 +198,7 @@
 >       + 单例模式（Singleton）： *饿汉式、懒汉式*
 >   + 结构型模式（structural）
 >       + 代理模式（Proxy）：*四个例子（静态代理 /动态代理）*
+>       + demo02 ： *狂神_线程的底层模式*
 >   + 行为型模式（behavioral）
 >       + 模板方法模式（TemplateMethod） / 模板模式（Template）：*两个例子*
 >   

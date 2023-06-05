@@ -1,6 +1,5 @@
-package basic.thread.demo02;
+package design.pattern.structural.demo02;
 
-import basic.thread.demo01.ThreadTest02;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
